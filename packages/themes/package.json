@@ -1,0 +1,10 @@
+{
+  "name": "@cosense-toolkit/themes",
+  "version": "0.1.0",
+  "description": "Scrapbox (Cosense) design systems and themes",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs --watch"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "modern-clean",
+  "label": "Modern Clean",
+  "badge": "Classic",
+  "description": "Original clean light workspace theme without dynamic fluid animations.",
+  "baseBg": "#F7F8FA",
+  "effects": {
+    "fluidField": "off",
+    "surfaceTension": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "optical-glass",
+  "label": "Pure Optical Glass",
+  "badge": "Night",
+  "description": "Deep midnight void with zero-fill optical glass & pale champagne gold typography.",
+  "baseBg": "#04080F",
+  "effects": {
+    "fluidField": "night",
+    "surfaceTension": true
+  }
+}

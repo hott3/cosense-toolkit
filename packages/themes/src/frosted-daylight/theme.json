@@ -1,0 +1,11 @@
+{
+  "id": "frosted-daylight",
+  "label": "Frosted Daylight",
+  "badge": "Day",
+  "description": "Bright silky pearl backdrop with frosted glass plates and soft sky-amber pools.",
+  "baseBg": "#EFF4FA",
+  "effects": {
+    "fluidField": "day",
+    "surfaceTension": true
+  }
+}
