@@ -7,14 +7,14 @@ import { OpticalDock } from './dock';
 const STORAGE_KEY = 'hot3-cosense-theme';
 const STYLE_ID = 'hot3-optic-lens-runtime-style';
 const THEME_LINK_ID = 'hot3-dynamic-theme-css';
-const THEMES_BASE_URL = 'https://hott3.github.io/cosense-toolkit/themes';
+const COSENSE_HOST_PROJECT = 'cosense-toolkit';
 
 const THEMES: ThemeDefinition[] = [
   {
     id: 'optical-glass',
     label: 'Pure Optical Glass',
     badge: 'Night',
-    slug: 'pure-optical-glass',
+    page: 'Theme-Pure-Optical-Glass',
     baseBg: '#04080F',
     swatch: 'linear-gradient(135deg, #04080F 0%, #1E4073 60%, #C8B996 100%)',
     fluidMode: 'night',
@@ -25,7 +25,7 @@ const THEMES: ThemeDefinition[] = [
     id: 'frosted-daylight',
     label: 'Frosted Daylight',
     badge: 'Day',
-    slug: 'frosted-daylight',
+    page: 'Theme-Frosted-Daylight',
     baseBg: '#EFF4FA',
     swatch: 'linear-gradient(135deg, #EFF4FA 0%, #BAE6FD 55%, #FDE68A 100%)',
     fluidMode: 'day',
@@ -36,7 +36,7 @@ const THEMES: ThemeDefinition[] = [
     id: 'modern-clean',
     label: 'Modern Clean',
     badge: 'Classic',
-    slug: 'modern-clean',
+    page: 'Theme-Modern-Clean',
     baseBg: '#F7F8FA',
     swatch: 'linear-gradient(135deg, #F7F8FA 0%, #FFFFFF 60%, #2EAADC 100%)',
     fluidMode: 'off',
@@ -78,7 +78,7 @@ export function initOpticLens(): void {
       return;
     }
 
-    const href = `${THEMES_BASE_URL}/${theme.slug}/style.css`;
+    const href = `/api/code/${COSENSE_HOST_PROJECT}/${encodeURIComponent(theme.page)}/style.css`;
 
     if (!linkEl) {
       linkEl = document.createElement('link');

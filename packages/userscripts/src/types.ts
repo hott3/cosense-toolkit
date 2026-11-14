@@ -4,7 +4,7 @@ export interface ThemeDefinition {
   id: string;
   label: string;
   badge: string;
-  slug: string;
+  page: string;
   baseBg: string;
   swatch: string;
   fluidMode: FluidMode;
