@@ -13,6 +13,37 @@
 
 ---
 
+## 全体構成・配信の仕組み
+
+`scrapbox.io` の Content Security Policy (CSP) により外部ドメイン（`github.io` 等）からの CSS / JS 読み込みはブロックされるため、ビルド成果物を **公開 Cosense プロジェクト（[`/cosense-toolkit`](https://scrapbox.io/cosense-toolkit/)）** に同期し、各プロジェクトからは同一ドメイン（`/api/code/cosense-toolkit/...`）として読み込む構成を採用しています。
+
+```mermaid
+flowchart LR
+  subgraph GitHub["GitHub (hott3/cosense-toolkit)"]
+    Src["ソースコード (packages/themes, userscripts)"]
+    Build["ビルド (pnpm build -> dist/)"]
+    Pages["GitHub Pages (成果物公開)"]
+    Src --> Build --> Pages
+  end
+
+  subgraph PublicPJ["公開 Cosense (/cosense-toolkit)"]
+    ThemePages["テーマページ群 (Theme-Pure-Optical-Glass 等)"]
+    ScriptPage["スクリプトページ (Cosense-Toolkit-Script)"]
+  end
+
+  subgraph UserPJ["あなたの Cosense 環境"]
+    Settings["対象 PJ の settings (code:style.css)"]
+    UserPage["ユーザーページ (code:script.js)"]
+  end
+
+  Build -.->|"書き写し / 同期 (CSP 回避)"| ThemePages
+  Build -.->|"書き写し / 同期 (CSP 回避)"| ScriptPage
+  ThemePages -->|"同一オリジン ('self') で @import"| Settings
+  ScriptPage -->|"同一オリジン ('self') で import"| UserPage
+```
+
+---
+
 ## ディレクトリ構成
 
 ```text
@@ -61,17 +92,15 @@ cosense-toolkit/
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Default Theme: Pure Optical Glass (GitHub Pages 配信) */
-@import url('https://hott3.github.io/cosense-toolkit/themes/pure-optical-glass/style.css');
+/* Default Theme: Pure Optical Glass (公開 Cosense プロジェクト経由) */
+@import url('/api/code/cosense-toolkit/Theme-Pure-Optical-Glass/style.css');
 ```
-
-※ Cosense 内部ページから直接読み込む場合は、プロジェクト内の各テーマページ（`Theme-Pure-Optical-Glass` 等）を `@import` することも可能です。
 
 ### 2. UserScript の読み込み（ユーザーページ）
 ご自身のユーザーページ（例: `hott3`）の `code:script.js` に以下を記載します：
 
 ```javascript
-import 'https://hott3.github.io/cosense-toolkit/userscripts/script.min.js';
+import '/api/code/cosense-toolkit/Cosense-Toolkit-Script/script.js';
 ```
 
 読み込むと画面右下に **Optical Lens ドック** が常駐し、パレットからいつでも瞬時にテーマを切り替えられるようになります（設定は `localStorage` に保持されます）。
@@ -117,4 +146,4 @@ mise run dev
 
 ## License
 
-MIT © hott3
+[MIT License](./LICENSE) © hott3
