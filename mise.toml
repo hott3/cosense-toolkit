@@ -1,0 +1,15 @@
+[tools]
+node = "24"
+pnpm = "latest"
+
+[tasks.build]
+description = "Build all packages (themes and userscripts)"
+run = "pnpm -r build"
+
+[tasks.dev]
+description = "Dev watch mode"
+run = "pnpm -r dev"
+
+[tasks.typecheck]
+description = "Typecheck all packages"
+run = "pnpm -r typecheck"
