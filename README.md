@@ -56,7 +56,7 @@ cosense-toolkit/
 │       ├── src/
 │       │   ├── domain/       # 純粋関数・型・定数 (DOM 非依存)
 │       │   ├── infrastructure/ # Storage / Cosense API / DOM UI シェル
-│       │   ├── features/     # 独立機能スライス (Theme / Fluid / Ripple)
+│       │   ├── features/     # 独立機能スライス (Theme / Fluid / Ripple / SearchTools / PageTemplates / TodayPageMarker)
 │       │   ├── application/  # 起動・ON/OFF 設定・依存配線
 │       │   └── index.ts
 │       ├── tests/            # Vitest + happy-dom + アーキテクチャ境界テスト
@@ -107,10 +107,15 @@ cosense-toolkit/
 ご自身のユーザーページ（例: `hott3`）の `code:script.js` に以下を記載します：
 
 ```javascript
-import '/api/code/cosense-toolkit/userscript-v0.1.0/script.js';
+import '/api/code/cosense-toolkit/userscript-v0.2.0/script.js';
 ```
 
-読み込むと画面右下に **Optical Lens ドック** が常駐し、パレットからいつでも瞬時にテーマを切り替えられるようになります（設定は `localStorage` に保持されます）。
+読み込むと以下の機能が有効になります（すべて `src/application/config.ts` のフラグで制御可能です）：
+
+- **Optical Lens ドック ＆ テーマスイッチャー**：画面右下に常駐し、パレットから瞬時にテーマや流体背景・表面張力リップルを切り替え（設定は `localStorage` に保持）。
+- **外部検索メニュー (`search-tools`)**：PageMenu に 6 種の外部検索アクション（Google AI モード、Google 検索、Weblio 辞書［引用文自動挿入付き］、Google Fonts、LyricFind、Let's EMOJI）を追加。
+- **ページテンプレート (`page-templates`)**：PageMenu に定型テンプレート 3 種（`:ticketlog`、`日報 YYYYMMDD`、`セミナーレポート`）を出力する項目を追加。
+- **今日の日報カード強調 (`today-page-marker`)**：当日の `日報 YYYYMMDD` カードへ `.today-page` クラスを付与し、Optical Glass トークンに準拠したバッジ＆ハイライトを適用（SPA 遷移時の再判定対応）。
 
 ---
 

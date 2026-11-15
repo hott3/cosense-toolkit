@@ -4,7 +4,7 @@ declare const __COSENSE_USERSCRIPT_VERSION__: string | undefined;
 export const USERCSS_VERSION =
   typeof __COSENSE_USERCSS_VERSION__ !== 'undefined' ? __COSENSE_USERCSS_VERSION__ : '0.1.0';
 export const USERSCRIPT_VERSION =
-  typeof __COSENSE_USERSCRIPT_VERSION__ !== 'undefined' ? __COSENSE_USERSCRIPT_VERSION__ : '0.1.0';
+  typeof __COSENSE_USERSCRIPT_VERSION__ !== 'undefined' ? __COSENSE_USERSCRIPT_VERSION__ : '0.2.0';
 
 export const USERCSS_TAG = `usercss-v${USERCSS_VERSION}`;
 export const USERSCRIPT_TAG = `userscript-v${USERSCRIPT_VERSION}`;
