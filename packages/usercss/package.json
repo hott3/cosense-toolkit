@@ -1,6 +1,6 @@
 {
   "name": "@cosense-toolkit/usercss",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Scrapbox (Cosense) design systems and themes",
   "type": "module",
   "scripts": {
