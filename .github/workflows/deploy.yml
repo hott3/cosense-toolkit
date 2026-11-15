@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -31,15 +34,20 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
+      - name: Run tests
+        run: pnpm test
+
       - name: Build packages
         run: pnpm build
 
       - name: Upload artifact for GitHub Pages
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
