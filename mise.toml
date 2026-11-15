@@ -3,7 +3,7 @@ node = "24"
 pnpm = "latest"
 
 [tasks.build]
-description = "Build all packages (themes and userscripts)"
+description = "Build all packages (usercss and userscript)"
 run = "pnpm -r build"
 
 [tasks.dev]

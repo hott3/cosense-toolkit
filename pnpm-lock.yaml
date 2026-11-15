@@ -8,9 +8,9 @@ importers:
 
   .: {}
 
-  packages/themes: {}
+  packages/usercss: {}
 
-  packages/userscripts:
+  packages/userscript:
     devDependencies:
       esbuild:
         specifier: ^0.25.0

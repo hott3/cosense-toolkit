@@ -2,7 +2,7 @@
   "name": "cosense-toolkit",
   "version": "0.1.0",
   "private": true,
-  "description": "Scrapbox (Cosense) themes, userscripts, and productivity tools",
+  "description": "Scrapbox (Cosense) usercss, userscript, and productivity tools",
   "author": "hott3",
   "license": "MIT",
   "type": "module",
