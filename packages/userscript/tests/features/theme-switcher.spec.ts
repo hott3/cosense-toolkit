@@ -1,6 +1,11 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { USERCSS_TAG } from '../../src/domain/theme';
-import { STORAGE_KEY } from '../../src/features/theme-switcher/logic';
+import { DEFAULT_THEME_ID, USERCSS_TAG } from '../../src/domain/theme';
+import {
+  LEGACY_STORAGE_KEY,
+  STORAGE_KEY,
+  STYLE_ID,
+  loadSavedTheme,
+} from '../../src/features/theme-switcher/logic';
 import { ThemeSwitcherController } from '../../src/features/theme-switcher/ui';
 import { THEME_ATTRIBUTE, THEME_LINK_ID } from '../../src/infrastructure/api/theme-loader';
 
@@ -9,6 +14,12 @@ describe('features/theme-switcher (Given-When-Then)', () => {
     document.head.innerHTML = '';
     document.documentElement.removeAttribute(THEME_ATTRIBUTE);
     window.localStorage.clear();
+  });
+
+  it('uses cosense-toolkit identifiers and runtime style id', () => {
+    expect(STORAGE_KEY).toBe('cosense-toolkit-theme');
+    expect(STYLE_ID).toBe('cosense-optic-lens-runtime-style');
+    expect(LEGACY_STORAGE_KEY).toBe(['hot', '3-cosense-theme'].join(''));
   });
 
   it('Given a saved theme in storage, When ThemeSwitcherController initializes and switches themes, Then DOM attribute, dynamic CSS link, and localStorage stay synchronized', () => {
@@ -35,5 +46,32 @@ describe('features/theme-switcher (Given-When-Then)', () => {
     expect(glass.id).toBe('optical-glass');
     expect(document.documentElement.getAttribute(THEME_ATTRIBUTE)).toBe('optical-glass');
     expect(document.getElementById(THEME_LINK_ID)).toBeNull();
+  });
+
+  it('Given only the legacy storage key is saved, When loadSavedTheme and ThemeSwitcherController initialize, Then the legacy theme is inherited', () => {
+    // Given
+    const legacyKey = ['hot', '3-cosense-theme'].join('');
+    window.localStorage.setItem(legacyKey, 'frosted-daylight');
+
+    // When
+    const loaded = loadSavedTheme();
+    const controller = new ThemeSwitcherController();
+
+    // Then
+    expect(loaded.id).toBe('frosted-daylight');
+    expect(controller.getActiveTheme().id).toBe('frosted-daylight');
+  });
+
+  it('Given both new and legacy keys or neither key, When loadSavedTheme runs, Then STORAGE_KEY takes precedence and empty storage falls back to default', () => {
+    // Given both keys
+    window.localStorage.setItem(LEGACY_STORAGE_KEY, 'frosted-daylight');
+    window.localStorage.setItem(STORAGE_KEY, 'modern-clean');
+
+    // Then new key takes precedence
+    expect(loadSavedTheme().id).toBe('modern-clean');
+
+    // Given neither key
+    window.localStorage.clear();
+    expect(loadSavedTheme().id).toBe(DEFAULT_THEME_ID);
   });
 });

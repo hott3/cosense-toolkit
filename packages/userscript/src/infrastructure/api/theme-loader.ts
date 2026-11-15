@@ -1,7 +1,7 @@
 import { buildThemeCssHref, type ThemeDefinition } from '../../domain/theme';
 
-export const THEME_ATTRIBUTE = 'data-hot3-theme';
-export const THEME_LINK_ID = 'hot3-dynamic-theme-css';
+export const THEME_ATTRIBUTE = 'data-cosense-theme';
+export const THEME_LINK_ID = 'cosense-dynamic-theme-css';
 
 /**
  * Set the active theme attribute on `document.documentElement`.

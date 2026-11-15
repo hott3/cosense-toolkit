@@ -1,9 +1,9 @@
-export const TOAST_BOX_ID = 'hot3OpticToastBox';
+export const TOAST_BOX_ID = 'cosenseOpticToastBox';
 export const TOAST_DURATION_MS = 2400;
 
 export const TOAST_CSS = `
   /* Floating Optical Toast */
-  #hot3OpticToastBox {
+  #cosenseOpticToastBox {
     position: fixed;
     top: 58px; left: 50%;
     transform: translate3d(-50%, -18px, 0);
@@ -18,15 +18,15 @@ export const TOAST_CSS = `
     transition: transform 240ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 200ms ease;
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticToastBox,
-  html[data-hot3-theme="modern-clean"] #hot3OpticToastBox {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticToastBox,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticToastBox {
     color: #0F172A;
     background: rgba(255, 255, 255, 0.90);
     border-color: rgba(15, 23, 42, 0.12);
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
   }
 
-  #hot3OpticToastBox.is-visible {
+  #cosenseOpticToastBox.is-visible {
     transform: translate3d(-50%, 0, 0);
     opacity: 1;
   }
