@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const srcDir = path.resolve(__dirname, '../src');
-const rootDistDir = path.resolve(__dirname, '../../../dist/themes');
+const rootDistDir = path.resolve(__dirname, '../../../dist/usercss');
 
 fs.mkdirSync(rootDistDir, { recursive: true });
 
@@ -40,8 +40,8 @@ for (const themeId of themeEntries) {
     effects: meta.effects || {}
   });
 
-  console.log(`[themes] Built: ${themeId}`);
+  console.log(`[usercss] Built: ${themeId}`);
 }
 
 fs.writeFileSync(path.join(rootDistDir, 'index.json'), JSON.stringify(manifest, null, 2) + '\n', 'utf8');
-console.log(`[themes] Wrote manifest: ${manifest.length} themes.`);
+console.log(`[usercss] Wrote manifest: ${manifest.length} themes.`);

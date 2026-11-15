@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const entryPoint = path.resolve(__dirname, '../src/index.ts');
-const outDir = path.resolve(__dirname, '../../../dist/userscripts');
+const outDir = path.resolve(__dirname, '../../../dist/userscript');
 
 const isWatch = process.argv.includes('--watch');
 
@@ -35,7 +35,7 @@ async function build() {
     sourcemap: false
   });
 
-  console.log('[userscripts] Bundled successfully to dist/userscripts/script.js & script.min.js');
+  console.log('[userscript] Bundled successfully to dist/userscript/script.js & script.min.js');
 }
 
 if (isWatch) {
@@ -45,7 +45,7 @@ if (isWatch) {
     sourcemap: true
   });
   await ctx.watch();
-  console.log('[userscripts] Watching for changes...');
+  console.log('[userscript] Watching for changes...');
 } else {
   await build();
 }

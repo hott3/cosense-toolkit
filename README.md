@@ -20,7 +20,7 @@
 ```mermaid
 flowchart LR
   subgraph GitHub["GitHub (hott3/cosense-toolkit)"]
-    Src["ソースコード (packages/themes, userscripts)"]
+    Src["ソースコード (packages/usercss, userscript)"]
     Build["ビルド (pnpm build -> dist/)"]
     Pages["GitHub Pages (成果物公開)"]
     Src --> Build --> Pages
@@ -49,19 +49,19 @@ flowchart LR
 ```text
 cosense-toolkit/
 ├── packages/
-│   ├── themes/               # UserCSS テーマ群 (Pure Optical Glass, Daylight, Clean)
+│   ├── usercss/              # UserCSS テーマ群 (Pure Optical Glass, Daylight, Clean)
 │   │   ├── src/
 │   │   └── scripts/build.mjs
-│   └── userscripts/          # TypeScript 製 UserScript (ドック・テーマ切替・リップル)
+│   └── userscript/           # TypeScript 製 UserScript (ドック・テーマ切替・リップル)
 │       ├── src/
 │       └── scripts/build.mjs
 ├── apps/                     # （将来拡張）Chrome 拡張機能 / モバイル PWA
 ├── skills/                   # （将来拡張）Scrapbox 連携 Agent Skills
 ├── dist/                     # GitHub Pages 配信成果物 (自動ビルド)
-│   ├── themes/
+│   ├── usercss/
 │   │   ├── index.json        # テーマ一覧マニフェスト
 │   │   └── <theme-id>/style.css
-│   └── userscripts/
+│   └── userscript/
 │       ├── script.js
 │       └── script.min.js
 ├── mise.toml                 # Node 24 + pnpm 管理
