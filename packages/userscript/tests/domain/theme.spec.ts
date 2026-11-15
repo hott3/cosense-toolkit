@@ -4,10 +4,20 @@ import {
   DEFAULT_THEME_ID,
   THEMES,
   USERCSS_TAG,
+  USERSCRIPT_TAG,
+  USERSCRIPT_VERSION,
   resolveTheme,
 } from '../../src/domain/theme';
 
 describe('domain/theme', () => {
+  describe('version constants', () => {
+    it('exposes matching userscript 0.2.0 and usercss-v0.1.0 tags', () => {
+      expect(USERSCRIPT_VERSION).toBe('0.2.0');
+      expect(USERSCRIPT_TAG).toBe('userscript-v0.2.0');
+      expect(USERCSS_TAG).toBe('usercss-v0.1.0');
+    });
+  });
+
   describe('resolveTheme', () => {
     it('returns the matching theme when a known theme id is provided', () => {
       // Arrange

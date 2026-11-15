@@ -1,11 +1,15 @@
 import { THEMES } from '../domain/theme';
 import { AMBIENT_FLUID_CSS } from '../features/ambient-fluid/style';
 import { AmbientFluidField } from '../features/ambient-fluid/ui';
+import { initPageTemplates } from '../features/page-templates/ui';
+import { initSearchTools } from '../features/search-tools/ui';
 import { SURFACE_TENSION_CSS } from '../features/surface-tension/style';
 import { SurfaceTensionPhysics } from '../features/surface-tension/ui';
 import { STYLE_ID } from '../features/theme-switcher/logic';
 import { THEME_SWITCHER_CSS } from '../features/theme-switcher/style';
 import { ThemeSwitcherController } from '../features/theme-switcher/ui';
+import { TODAY_PAGE_MARKER_CSS } from '../features/today-page-marker/style';
+import { initTodayPageMarker } from '../features/today-page-marker/ui';
 import '../infrastructure/api/cosense';
 import { DOCK_SHELL_CSS, OpticalDock } from '../infrastructure/ui/dock-shell';
 import { injectStyleOnce } from '../infrastructure/ui/style-injector';
@@ -24,7 +28,9 @@ export function initCosenseToolkit(flagOverrides?: Partial<ToolkitFeatureFlags>)
 
   const flags = resolveFeatureFlags(flagOverrides);
 
+  // Place TODAY_PAGE_MARKER_CSS first so its @import rule precedes any CSS rulesets.
   const combinedCss = [
+    flags.todayPageMarker ? TODAY_PAGE_MARKER_CSS : '',
     flags.themeSwitcher ? DOCK_SHELL_CSS : '',
     flags.themeSwitcher ? THEME_SWITCHER_CSS : '',
     flags.themeSwitcher ? TOAST_CSS : '',
@@ -36,6 +42,18 @@ export function initCosenseToolkit(flagOverrides?: Partial<ToolkitFeatureFlags>)
 
   if (combinedCss) {
     injectStyleOnce(RUNTIME_STYLE_ID, combinedCss);
+  }
+
+  if (flags.searchTools) {
+    initSearchTools();
+  }
+
+  if (flags.pageTemplates) {
+    initPageTemplates();
+  }
+
+  if (flags.todayPageMarker) {
+    initTodayPageMarker();
   }
 
   const ambient = flags.ambientFluid ? new AmbientFluidField() : null;

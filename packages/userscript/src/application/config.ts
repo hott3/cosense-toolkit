@@ -2,12 +2,18 @@ export interface ToolkitFeatureFlags {
   readonly themeSwitcher: boolean;
   readonly ambientFluid: boolean;
   readonly surfaceTension: boolean;
+  readonly searchTools: boolean;
+  readonly pageTemplates: boolean;
+  readonly todayPageMarker: boolean;
 }
 
 export const DEFAULT_FEATURE_FLAGS: ToolkitFeatureFlags = {
   themeSwitcher: true,
   ambientFluid: true,
   surfaceTension: true,
+  searchTools: true,
+  pageTemplates: true,
+  todayPageMarker: true,
 };
 
 /**
