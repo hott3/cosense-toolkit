@@ -27,8 +27,8 @@ flowchart LR
   end
 
   subgraph PublicPJ["公開 Cosense (/cosense-toolkit)"]
-    ThemePages["テーマページ群 (Theme-Pure-Optical-Glass 等)"]
-    ScriptPage["スクリプトページ (Cosense-Toolkit-Script)"]
+    ThemePages["バージョン別テーマページ (usercss-vX.Y.Z)"]
+    ScriptPage["バージョン別スクリプトページ (userscript-vX.Y.Z)"]
   end
 
   subgraph UserPJ["あなたの Cosense 環境"]
@@ -52,8 +52,15 @@ cosense-toolkit/
 │   ├── usercss/              # UserCSS テーマ群 (Pure Optical Glass, Daylight, Clean)
 │   │   ├── src/
 │   │   └── scripts/build.mjs
-│   └── userscript/           # TypeScript 製 UserScript (ドック・テーマ切替・リップル)
+│   └── userscript/           # TypeScript 製 UserScript (4層アーキテクチャ)
 │       ├── src/
+│       │   ├── domain/       # 純粋関数・型・定数 (DOM 非依存)
+│       │   ├── infrastructure/ # Storage / Cosense API / DOM UI シェル
+│       │   ├── features/     # 独立機能スライス (Theme / Fluid / Ripple)
+│       │   ├── application/  # 起動・ON/OFF 設定・依存配線
+│       │   └── index.ts
+│       ├── tests/            # Vitest + happy-dom + アーキテクチャ境界テスト
+│       ├── vitest.config.ts
 │       └── scripts/build.mjs
 ├── apps/                     # （将来拡張）Chrome 拡張機能 / モバイル PWA
 ├── skills/                   # （将来拡張）Scrapbox 連携 Agent Skills
@@ -85,25 +92,44 @@ cosense-toolkit/
 
 ## Scrapbox への導入方法
 
-### 1. テーマの読み込み (`settings`)
-プロジェクトの `settings` ページに以下を記載します（初期テーマとして Pure Optical Glass を読み込む場合）：
+### 1. テーマの読み込み (`settings` または個人ページ)
+プロジェクトの `settings`（または個人ページ）の `code:style.css` に、バージョン固定ページを指定して記載します（初期テーマとして Pure Optical Glass を読み込む場合）：
 
 ```css
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Default Theme: Pure Optical Glass (公開 Cosense プロジェクト経由) */
-@import url('/api/code/cosense-toolkit/Theme-Pure-Optical-Glass/style.css');
+/* Default Theme: Pure Optical Glass (公開 Cosense プロジェクト / パッケージバージョン固定) */
+@import url('/api/code/cosense-toolkit/usercss-v0.1.0/pure-optical-glass.css');
 ```
 
 ### 2. UserScript の読み込み（ユーザーページ）
 ご自身のユーザーページ（例: `hott3`）の `code:script.js` に以下を記載します：
 
 ```javascript
-import '/api/code/cosense-toolkit/Cosense-Toolkit-Script/script.js';
+import '/api/code/cosense-toolkit/userscript-v0.1.0/script.js';
 ```
 
 読み込むと画面右下に **Optical Lens ドック** が常駐し、パレットからいつでも瞬時にテーマを切り替えられるようになります（設定は `localStorage` に保持されます）。
+
+---
+
+## アーキテクチャ設計と開発ルール
+
+`packages/userscript` は以下の **4層アーキテクチャ** を採用しています。
+
+| 層 | パス | 責務 | 依存制約 |
+| --- | --- | --- | --- |
+| **Application** | `src/application/` | 起動制御（重複防止）、機能 ON/OFF 設定、Feature 間の配線 | 全層を参照可 |
+| **Features** | `src/features/` | 個別機能スライス（`logic.ts` / `ui.ts` / `style.ts`） | `domain/` と `infrastructure/` のみ参照可（**Feature 間の直接 `import` 禁止**・同一 Feature 内分割は可） |
+| **Domain** | `src/domain/` | 型定義、定数、純粋ロジック（`theme.ts`, `drift.ts`, `date.ts`） | 外部ライブラリ・DOM（`window`/`document`）非依存 |
+| **Infrastructure** | `src/infrastructure/` | `localStorage`、`window.scrapbox` アダプター、共通 UI シェル/トースト | `domain/` のみ参照可 |
+
+### 運用ルール
+- **実装前の確認**：新しい Feature を追加・編集する前に、まず `domain/` や `infrastructure/` に再利用できる共通定数・アダプター・UI 部品（トースト等）がないか確認してください。
+- **肥大化時の昇格**：Feature 内のロジックが他機能でも再利用可能になったり大きくなったりした場合は、`domain/` または `infrastructure/` へ昇格させて重複を排除してください。
+- **境界の自動検証**：`tests/architecture.spec.ts` により Feature 間の直接 `import` 違反が CI で自動チェックされます。
+- **パッケージ別バージョニング**：モノレポ内のバージョンはパッケージ単位（`usercss-vX.Y.Z` / `userscript-vX.Y.Z`）で管理し、`/cosense-toolkit` 上でも対応するバージョンページから配信します。
 
 ---
 
@@ -126,7 +152,12 @@ pnpm build
 # 4. 型チェック
 mise run typecheck
 
-# 5. 開発監視モード
+# 5. テスト実行 (単体・結合・アーキテクチャ境界)
+mise run test
+# または
+pnpm test
+
+# 6. 開発監視モード
 mise run dev
 ```
 

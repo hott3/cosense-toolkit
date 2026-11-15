@@ -6,10 +6,17 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "node scripts/build.mjs --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.1.0",
     "esbuild": "^0.25.0",
-    "typescript": "^5.8.2"
+    "happy-dom": "^21.0.4",
+    "typescript": "^5.8.2",
+    "vitest": "^5.1.0"
   }
 }

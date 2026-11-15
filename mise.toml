@@ -13,3 +13,7 @@ run = "pnpm -r dev"
 [tasks.typecheck]
 description = "Typecheck all packages"
 run = "pnpm -r typecheck"
+
+[tasks.test]
+description = "Run unit and architecture tests"
+run = "pnpm -r test"
