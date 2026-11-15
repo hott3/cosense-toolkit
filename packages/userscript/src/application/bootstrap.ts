@@ -23,8 +23,8 @@ export const RUNTIME_STYLE_ID = STYLE_ID;
  */
 export function initCosenseToolkit(flagOverrides?: Partial<ToolkitFeatureFlags>): void {
   if (typeof window === 'undefined' || typeof document === 'undefined') return;
-  if (window.__hot3OpticLensInitialized) return;
-  window.__hot3OpticLensInitialized = true;
+  if (window.__cosenseToolkitInitialized) return;
+  window.__cosenseToolkitInitialized = true;
 
   const flags = resolveFeatureFlags(flagOverrides);
 

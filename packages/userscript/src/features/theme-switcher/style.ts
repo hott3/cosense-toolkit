@@ -1,6 +1,6 @@
 export const THEME_SWITCHER_CSS = `
   /* Theme Switcher Popover Menu */
-  #hot3OpticThemeMenu {
+  #cosenseOpticThemeMenu {
     position: fixed;
     bottom: 78px;
     right: 22px;
@@ -23,21 +23,21 @@ export const THEME_SWITCHER_CSS = `
     transition: opacity 180ms ease, transform 240ms cubic-bezier(0.34, 1.56, 0.64, 1), visibility 180ms ease;
   }
 
-  #hot3OpticThemeMenu.is-open {
+  #cosenseOpticThemeMenu.is-open {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
     transform: translate3d(0, 0, 0) scale(1);
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticThemeMenu,
-  html[data-hot3-theme="modern-clean"] #hot3OpticThemeMenu {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticThemeMenu,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticThemeMenu {
     background: rgba(255, 255, 255, 0.90);
     border: 1px solid rgba(15, 23, 42, 0.12);
     box-shadow: 0 20px 44px -10px rgba(15, 23, 42, 0.20);
   }
 
-  #hot3OpticThemeMenu .optic-menu-title {
+  #cosenseOpticThemeMenu .optic-menu-title {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -76,19 +76,19 @@ export const THEME_SWITCHER_CSS = `
     color: #F6F0E0;
   }
 
-  html[data-hot3-theme="frosted-daylight"] .optic-theme-item,
-  html[data-hot3-theme="modern-clean"] .optic-theme-item {
+  html[data-cosense-theme="frosted-daylight"] .optic-theme-item,
+  html[data-cosense-theme="modern-clean"] .optic-theme-item {
     color: #475569;
   }
 
-  html[data-hot3-theme="frosted-daylight"] .optic-theme-item:hover,
-  html[data-hot3-theme="modern-clean"] .optic-theme-item:hover {
+  html[data-cosense-theme="frosted-daylight"] .optic-theme-item:hover,
+  html[data-cosense-theme="modern-clean"] .optic-theme-item:hover {
     background: rgba(15, 23, 42, 0.05);
     color: #0F172A;
   }
 
-  html[data-hot3-theme="frosted-daylight"] .optic-theme-item.is-active,
-  html[data-hot3-theme="modern-clean"] .optic-theme-item.is-active {
+  html[data-cosense-theme="frosted-daylight"] .optic-theme-item.is-active,
+  html[data-cosense-theme="modern-clean"] .optic-theme-item.is-active {
     background: rgba(14, 165, 233, 0.10);
     border-color: rgba(14, 165, 233, 0.35);
     color: #0F172A;
@@ -118,12 +118,12 @@ export const THEME_SWITCHER_CSS = `
     opacity: 0.85;
   }
 
-  html[data-hot3-theme="frosted-daylight"] .optic-theme-badge,
-  html[data-hot3-theme="modern-clean"] .optic-theme-badge {
+  html[data-cosense-theme="frosted-daylight"] .optic-theme-badge,
+  html[data-cosense-theme="modern-clean"] .optic-theme-badge {
     border-color: rgba(15, 23, 42, 0.14);
   }
 
   @media (max-width: 640px) {
-    #hot3OpticThemeMenu { bottom: 66px; right: 14px; }
+    #cosenseOpticThemeMenu { bottom: 66px; right: 14px; }
   }
 `;

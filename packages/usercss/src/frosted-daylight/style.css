@@ -3,9 +3,9 @@
    Silky Pearl Void · Soft Sky & Amber Refraction · Surface Tension Physics
    ========================================================================== */
 
-html[data-hot3-theme="frosted-daylight"],
-html[data-hot3-theme="frosted-daylight"],
-html[data-hot3-theme="frosted-daylight"][data-project-theme] {
+html[data-cosense-theme="frosted-daylight"],
+html[data-cosense-theme="frosted-daylight"],
+html[data-cosense-theme="frosted-daylight"][data-project-theme] {
 
   --color-background-base: #EFF4FA;
   --glass-transmission-fill: rgba(255, 255, 255, 0.54);
@@ -107,7 +107,7 @@ html[data-hot3-theme="frosted-daylight"][data-project-theme] {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] {
+html[data-cosense-theme="frosted-daylight"] {
 
   background-color: #EFF4FA !important;
   -webkit-font-smoothing: antialiased;
@@ -115,7 +115,7 @@ html[data-hot3-theme="frosted-daylight"] {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] body {
+html[data-cosense-theme="frosted-daylight"] body {
 
   background: transparent !important;
   color: #1E293B !important;
@@ -128,8 +128,8 @@ html[data-hot3-theme="frosted-daylight"] body {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] body::before,
-html[data-hot3-theme="frosted-daylight"] body::after {
+html[data-cosense-theme="frosted-daylight"] body::before,
+html[data-cosense-theme="frosted-daylight"] body::after {
 
   content: "";
   position: fixed;
@@ -141,7 +141,7 @@ html[data-hot3-theme="frosted-daylight"] body::after {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] body::before {
+html[data-cosense-theme="frosted-daylight"] body::before {
 
   background:
     radial-gradient(560px circle at 84% 14%, rgba(56, 189, 248, 0.18) 0%, rgba(125, 211, 252, 0.10) 40%, transparent 74%),
@@ -151,7 +151,7 @@ html[data-hot3-theme="frosted-daylight"] body::before {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] body::after {
+html[data-cosense-theme="frosted-daylight"] body::after {
 
   background:
     radial-gradient(580px circle at 16% 84%, rgba(167, 139, 250, 0.15) 0%, rgba(196, 181, 253, 0.08) 42%, transparent 76%),
@@ -176,18 +176,18 @@ html[data-hot3-theme="frosted-daylight"] body::after {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .app,
-html[data-hot3-theme="frosted-daylight"] .app .container,
-html[data-hot3-theme="frosted-daylight"] .related-page-list,
-html[data-hot3-theme="frosted-daylight"] .page-wrapper {
+html[data-cosense-theme="frosted-daylight"] .app,
+html[data-cosense-theme="frosted-daylight"] .app .container,
+html[data-cosense-theme="frosted-daylight"] .related-page-list,
+html[data-cosense-theme="frosted-daylight"] .page-wrapper {
 
   background: transparent !important;
 
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .navbar-default,
-html[data-hot3-theme="frosted-daylight"] .navbar {
+html[data-cosense-theme="frosted-daylight"] .navbar-default,
+html[data-cosense-theme="frosted-daylight"] .navbar {
 
   background: rgba(255, 255, 255, 0.62) !important;
   backdrop-filter: blur(18px) saturate(140%) !important;
@@ -199,16 +199,16 @@ html[data-hot3-theme="frosted-daylight"] .navbar {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .navbar-default .navbar-brand,
-html[data-hot3-theme="frosted-daylight"] .navbar-default .navbar-text,
-html[data-hot3-theme="frosted-daylight"] .navbar-default .navbar-nav > li > a {
+html[data-cosense-theme="frosted-daylight"] .navbar-default .navbar-brand,
+html[data-cosense-theme="frosted-daylight"] .navbar-default .navbar-text,
+html[data-cosense-theme="frosted-daylight"] .navbar-default .navbar-nav > li > a {
 
   color: #1E293B !important;
 
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .search-form .form-control {
+html[data-cosense-theme="frosted-daylight"] .search-form .form-control {
 
   background: rgba(255, 255, 255, 0.72) !important;
   border-radius: 9999px !important;
@@ -219,10 +219,10 @@ html[data-hot3-theme="frosted-daylight"] .search-form .form-control {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .new-button,
-html[data-hot3-theme="frosted-daylight"] .quick-launch .tool-btn,
-html[data-hot3-theme="frosted-daylight"] .page-menu .tool-btn,
-html[data-hot3-theme="frosted-daylight"] .dropdown-toggle.tool-btn {
+html[data-cosense-theme="frosted-daylight"] .new-button,
+html[data-cosense-theme="frosted-daylight"] .quick-launch .tool-btn,
+html[data-cosense-theme="frosted-daylight"] .page-menu .tool-btn,
+html[data-cosense-theme="frosted-daylight"] .dropdown-toggle.tool-btn {
 
   background: rgba(255, 255, 255, 0.68) !important;
   border-radius: 9999px !important;
@@ -234,9 +234,9 @@ html[data-hot3-theme="frosted-daylight"] .dropdown-toggle.tool-btn {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .new-button:active,
-html[data-hot3-theme="frosted-daylight"] .quick-launch .tool-btn:active,
-html[data-hot3-theme="frosted-daylight"] .page-menu .tool-btn:active:not([disabled]) {
+html[data-cosense-theme="frosted-daylight"] .new-button:active,
+html[data-cosense-theme="frosted-daylight"] .quick-launch .tool-btn:active,
+html[data-cosense-theme="frosted-daylight"] .page-menu .tool-btn:active:not([disabled]) {
 
   transform: scale(0.955, 1.03) !important;
   transition-duration: 90ms !important;
@@ -244,7 +244,7 @@ html[data-hot3-theme="frosted-daylight"] .page-menu .tool-btn:active:not([disabl
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .page {
+html[data-cosense-theme="frosted-daylight"] .page {
 
   background: rgba(255, 255, 255, 0.56) !important;
   backdrop-filter: blur(14px) saturate(140%) !important;
@@ -263,7 +263,7 @@ html[data-hot3-theme="frosted-daylight"] .page {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item a {
 
   background: rgba(255, 255, 255, 0.54) !important;
   backdrop-filter: blur(14px) saturate(140%) !important;
@@ -279,7 +279,7 @@ html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a:hover {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item a:hover {
 
   background: rgba(255, 255, 255, 0.80) !important;
   transform: translate3d(0, -2px, 0) !important;
@@ -288,7 +288,7 @@ html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a:hover {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a:active {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item a:active {
 
   transform: scale(0.955, 1.03) !important;
   transition-duration: 90ms !important;
@@ -296,23 +296,23 @@ html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a:active {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a .hover {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item a .hover {
  background: transparent !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a .header {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item a .header {
  border-top: none !important; padding: 12px 14px 6px !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a .title {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item a .title {
  color: #0F172A !important; font-weight: 600 !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a .description {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item a .description {
  color: #475569 !important; padding: 0 14px 12px !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a .pin {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item a .pin {
 
   top: 10px !important; right: 10px !important; width: 8px !important; height: 8px !important;
   border-radius: 9999px !important; background: #10B981 !important;
@@ -320,12 +320,12 @@ html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item a .pin {
 
 }
 
-html[data-hot3-theme="frosted-daylight"] .grid li.page-list-item.pin::after {
+html[data-cosense-theme="frosted-daylight"] .grid li.page-list-item.pin::after {
  display: none !important; 
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .relation-label a {
+html[data-cosense-theme="frosted-daylight"] .relation-label a {
 
   background: rgba(255, 255, 255, 0.62) !important;
   backdrop-filter: blur(14px) !important;
@@ -337,16 +337,16 @@ html[data-hot3-theme="frosted-daylight"] .relation-label a {
 
 }
 
-html[data-hot3-theme="frosted-daylight"] .relation-label .arrow {
+html[data-cosense-theme="frosted-daylight"] .relation-label .arrow {
  display: none !important; 
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .line {
+html[data-cosense-theme="frosted-daylight"] .line {
  line-height: 1.85 !important; color: #1E293B; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line.line-title {
+html[data-cosense-theme="frosted-daylight"] .line.line-title {
 
   color: #0F172A !important; font-weight: 700 !important;
   padding-bottom: 12px !important; margin-bottom: 14px !important;
@@ -354,26 +354,26 @@ html[data-hot3-theme="frosted-daylight"] .line.line-title {
 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line a.page-link {
+html[data-cosense-theme="frosted-daylight"] .line a.page-link {
  color: #0369A1 !important; border-bottom: 1px solid rgba(3, 105, 161, 0.25) !important; text-decoration: none !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line a.page-link.empty-page-link {
+html[data-cosense-theme="frosted-daylight"] .line a.page-link.empty-page-link {
  color: #94A3B8 !important; border-bottom: 1px dashed rgba(148, 163, 184, 0.5) !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line a.link {
+html[data-cosense-theme="frosted-daylight"] .line a.link {
  color: #0D9488 !important; border-bottom: 1px dashed rgba(13, 148, 136, 0.35) !important; text-decoration: none !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line a.page-link[type="hashTag"] {
+html[data-cosense-theme="frosted-daylight"] .line a.page-link[type="hashTag"] {
 
   display: inline-block; padding: 0 9px; margin: 0 2px; border-radius: 9999px !important;
   background: rgba(14, 165, 233, 0.08) !important; border: 1px solid rgba(14, 165, 233, 0.22) !important;
 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line .quote {
+html[data-cosense-theme="frosted-daylight"] .line .quote {
 
   background: rgba(15, 23, 42, 0.03) !important; border-left: 2px solid #0284C7 !important;
   color: #475569 !important; padding: 6px 14px !important; border-radius: 0 12px 12px 0 !important;
@@ -381,19 +381,19 @@ html[data-hot3-theme="frosted-daylight"] .line .quote {
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .line:has(span.code-block:not(.start)) {
+html[data-cosense-theme="frosted-daylight"] .line:has(span.code-block:not(.start)) {
  line-height: 1.6 !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line span.code-block.start {
+html[data-cosense-theme="frosted-daylight"] .line span.code-block.start {
  background: transparent !important; border: none !important; padding: 0 !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line span.code-block .code-block-margin {
+html[data-cosense-theme="frosted-daylight"] .line span.code-block .code-block-margin {
  background: transparent !important; height: 0.45em !important; margin-bottom: 0 !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line span.code-block .code-block-start {
+html[data-cosense-theme="frosted-daylight"] .line span.code-block .code-block-start {
 
   display: inline-flex; align-items: center; gap: 6px;
   background: rgba(255, 255, 255, 0.78) !important; color: #334155 !important;
@@ -402,16 +402,16 @@ html[data-hot3-theme="frosted-daylight"] .line span.code-block .code-block-start
 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line span.code-block .code-block-start a,
-html[data-hot3-theme="frosted-daylight"] .line span.code-block .code-block-start code {
+html[data-cosense-theme="frosted-daylight"] .line span.code-block .code-block-start a,
+html[data-cosense-theme="frosted-daylight"] .line span.code-block .code-block-start code {
  color: #0F172A !important; text-decoration: none !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line span.code-block:not(.start) {
+html[data-cosense-theme="frosted-daylight"] .line span.code-block:not(.start) {
  background: transparent !important; border: none !important; padding: 0 !important; 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line span.code-block:not(.start) > span.indent {
+html[data-cosense-theme="frosted-daylight"] .line span.code-block:not(.start) > span.indent {
 
   display: block !important; background: rgba(15, 23, 42, 0.045) !important; color: #0F172A !important;
   border-left: 1px solid rgba(15, 23, 42, 0.10) !important; border-right: 1px solid rgba(15, 23, 42, 0.10) !important;
@@ -420,28 +420,28 @@ html[data-hot3-theme="frosted-daylight"] .line span.code-block:not(.start) > spa
 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line:not(:has(span.code-block:not(.start))) + .line span.code-block:not(.start) > span.indent {
+html[data-cosense-theme="frosted-daylight"] .line:not(:has(span.code-block:not(.start))) + .line span.code-block:not(.start) > span.indent {
 
   border-top: 1px solid rgba(15, 23, 42, 0.10) !important;
   border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; padding-top: 10px !important;
 
 }
 
-html[data-hot3-theme="frosted-daylight"] .line:has(span.code-block:not(.start)):not(:has(+ .line span.code-block:not(.start))) span.code-block:not(.start) > span.indent {
+html[data-cosense-theme="frosted-daylight"] .line:has(span.code-block:not(.start)):not(:has(+ .line span.code-block:not(.start))) span.code-block:not(.start) > span.indent {
 
   border-bottom: 1px solid rgba(15, 23, 42, 0.12) !important;
   border-bottom-left-radius: 12px !important; border-bottom-right-radius: 12px !important; padding-bottom: 10px !important;
 
 }
 
-html[data-hot3-theme="frosted-daylight"] code.highlight,
-html[data-hot3-theme="frosted-daylight"] code.highlight .hljs {
+html[data-cosense-theme="frosted-daylight"] code.highlight,
+html[data-cosense-theme="frosted-daylight"] code.highlight .hljs {
  background: transparent !important; 
 }
 
 
-html[data-hot3-theme="frosted-daylight"] .modal-content,
-html[data-hot3-theme="frosted-daylight"] .dropdown-menu {
+html[data-cosense-theme="frosted-daylight"] .modal-content,
+html[data-cosense-theme="frosted-daylight"] .dropdown-menu {
 
   background: rgba(255, 255, 255, 0.86) !important;
   backdrop-filter: blur(22px) saturate(145%) !important;

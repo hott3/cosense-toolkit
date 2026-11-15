@@ -1,11 +1,11 @@
 /* ==========================================================================
-   Pure Optical Glass System — Applied from Hot3 Micro Journal & Lens
+   Pure Optical Glass System — Cosense Toolkit — Pure Optical Glass System
    Performance-Optimized: Zero blur(80px) filters, No nested backdrop-filter
    ========================================================================== */
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]),
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]),
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"])[data-project-theme] {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]),
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]),
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"])[data-project-theme] {
 
   /* 1. W3C DTCG Design Tokens */
   --color-background-base: #04080F;
@@ -127,7 +127,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"])[data-project
 /* ==========================================================================
    2. Deep Void Base & Zero-Blur Soft Gradient Light Pools (Fallback)
    ========================================================================== */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) {
 
   background-color: var(--color-background-base) !important;
   -webkit-font-smoothing: antialiased;
@@ -136,7 +136,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) {
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) body {
 
   background: transparent !important;
   background-color: transparent !important;
@@ -151,8 +151,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body {
 
 
 /* Soft multi-stop radial gradients (avoids heavy filter: blur(80px) pass) */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body::before,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body::after {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) body::before,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) body::after {
 
   content: "";
   position: fixed;
@@ -164,7 +164,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body::after 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body::before {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) body::before {
 
   background:
     radial-gradient(520px circle at 84% 16%, rgba(200, 185, 150, 0.12) 0%, rgba(45, 80, 130, 0.16) 34%, rgba(30, 60, 110, 0.06) 58%, transparent 78%),
@@ -174,7 +174,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body::before
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body::after {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) body::after {
 
   background:
     radial-gradient(580px circle at 14% 82%, rgba(30, 60, 110, 0.24) 0%, rgba(70, 50, 95, 0.12) 38%, rgba(20, 35, 70, 0.04) 62%, transparent 80%),
@@ -199,17 +199,17 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) body::after 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .app,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .app .container,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .related-page-list,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page-wrapper {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .app,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .app .container,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .related-page-list,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .page-wrapper {
 
   background: transparent !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) ::selection {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) ::selection {
 
   background: rgba(200, 185, 150, 0.26) !important;
   color: #FFFFFF !important;
@@ -220,8 +220,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) ::selection 
 /* ==========================================================================
    3. Pure Glass Dock (Top Navigation Bar & Controls — No Nested Blurs)
    ========================================================================== */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-default,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar-default,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar {
 
   background: rgba(8, 14, 26, 0.45) !important;
   backdrop-filter: blur(var(--blur-lens-dock)) saturate(140%) !important;
@@ -235,9 +235,9 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar {
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-default .navbar-brand,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-default .navbar-text,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-default .navbar-nav > li > a {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar-default .navbar-brand,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar-default .navbar-text,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar-default .navbar-nav > li > a {
 
   color: var(--color-text-primary) !important;
   transition: color 180ms ease;
@@ -245,8 +245,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-defa
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-default .navbar-brand:hover,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-default .navbar-nav > li > a:hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar-default .navbar-brand:hover,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar-default .navbar-nav > li > a:hover {
 
   color: #FFFFFF !important;
   background: transparent !important;
@@ -254,8 +254,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-defa
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar .navbar-menu .dropdown > a,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-default .navbar-toggle {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar .navbar-menu .dropdown > a,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar-default .navbar-toggle {
 
   border-radius: var(--radius-glass-pill) !important;
   transition: transform var(--motion-duration-oscillation) var(--motion-surface-tension-oscillation) !important;
@@ -263,8 +263,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-defa
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar .navbar-menu .dropdown > a:active,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-default .navbar-toggle:active {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar .navbar-menu .dropdown > a:active,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .navbar-default .navbar-toggle:active {
 
   transform: scale(0.955, 1.03) !important;
   transition-duration: var(--motion-duration-squish) !important;
@@ -274,7 +274,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .navbar-defa
 
 
 /* Search Pill (inherits navbar glass blur) */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .search-form .form-control {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .search-form .form-control {
 
   background: rgba(255, 255, 255, 0.03) !important;
   border-radius: var(--radius-glass-pill) !important;
@@ -289,14 +289,14 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .search-form
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .search-form .form-control::placeholder {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .search-form .form-control::placeholder {
 
   color: var(--color-text-tertiary) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .search-form .form-control:focus {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .search-form .form-control:focus {
 
   background: rgba(255, 255, 255, 0.06) !important;
   border-top-color: rgba(255, 255, 255, 0.55) !important;
@@ -308,10 +308,10 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .search-form
 
 
 /* Glass Bead Buttons (no redundant nested backdrop-filter) */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .new-button,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .quick-launch .tool-btn,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page-menu .tool-btn,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-toggle.tool-btn {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .new-button,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .quick-launch .tool-btn,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .page-menu .tool-btn,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .dropdown-toggle.tool-btn {
 
   background: rgba(255, 255, 255, 0.03) !important;
   border-radius: var(--radius-glass-pill) !important;
@@ -330,9 +330,9 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-to
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .new-button:hover,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .quick-launch .tool-btn:hover,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page-menu .tool-btn:hover:not([disabled]) {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .new-button:hover,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .quick-launch .tool-btn:hover,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .page-menu .tool-btn:hover:not([disabled]) {
 
   color: var(--color-text-primary) !important;
   border-top-color: rgba(255, 255, 255, 0.6) !important;
@@ -343,9 +343,9 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page-menu .
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .new-button:active,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .quick-launch .tool-btn:active,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page-menu .tool-btn:active:not([disabled]) {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .new-button:active,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .quick-launch .tool-btn:active,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .page-menu .tool-btn:active:not([disabled]) {
 
   transform: scale(0.955, 1.03) !important;
   transition-duration: var(--motion-duration-squish) !important;
@@ -357,7 +357,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page-menu .
 /* ==========================================================================
    4. Pure Liquid Glass Plates (Page Container & Page Cards)
    ========================================================================== */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .page {
 
   background: var(--glass-transmission-fill) !important;
   backdrop-filter: blur(var(--blur-lens-card)) saturate(135%) brightness(1.06) !important;
@@ -380,7 +380,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page {
 
 @media (max-width: 767px) {
 
-  html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page {
+  html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .page {
 
     padding: 26px 20px !important;
     border-radius: 22px !important;
@@ -392,7 +392,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .page {
 
 
 /* Page List Cards & Related Page Cards */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a {
 
   background: var(--glass-transmission-fill) !important;
   backdrop-filter: blur(var(--blur-lens-card)) saturate(135%) brightness(1.06) !important;
@@ -414,7 +414,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a:hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a:hover {
 
   background: var(--glass-interactive-fill) !important;
   border-top-color: rgba(255, 255, 255, 0.58) !important;
@@ -429,7 +429,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 
 
 /* Physical finger squish on card press */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a:active {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a:active {
 
   transform: scale(0.955, 1.03) !important;
   transition-duration: var(--motion-duration-squish) !important;
@@ -438,14 +438,14 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a .hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a .hover {
 
   background: transparent !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a .header {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a .header {
 
   border-top: none !important;
   padding: 12px 14px 6px !important;
@@ -453,7 +453,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a .title {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a .title {
 
   color: var(--color-text-primary) !important;
   font-weight: 500 !important;
@@ -462,7 +462,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a .description {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a .description {
 
   color: var(--color-text-secondary) !important;
   padding: 0 14px 12px !important;
@@ -471,7 +471,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a .description code {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a .description code {
 
   background: rgba(255, 255, 255, 0.06) !important;
   color: var(--color-text-secondary) !important;
@@ -482,7 +482,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 
 
 /* Pinned Card: Enhanced Top Specular + Luminous Status Bead */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item.pin a {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item.pin a {
 
   border-top: 1.5px solid rgba(246, 240, 224, 0.65) !important;
   box-shadow:
@@ -494,7 +494,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item a .pin {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item a .pin {
 
   top: 10px !important;
   right: 10px !important;
@@ -507,7 +507,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.page-list-item.pin::after {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .grid li.page-list-item.pin::after {
 
   display: none !important;
 
@@ -515,7 +515,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .grid li.pag
 
 
 /* Relation Labels (Links / 2-hop / Empty) */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-label a {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .relation-label a {
 
   background: rgba(255, 255, 255, 0.02) !important;
   backdrop-filter: blur(var(--blur-lens-card)) saturate(135%) !important;
@@ -533,7 +533,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-la
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-label a:hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .relation-label a:hover {
 
   border-top-color: rgba(255, 255, 255, 0.55) !important;
   box-shadow: 0 0 24px -6px var(--glow-ambient-lens), 0 16px 32px -10px rgba(0, 0, 0, 0.68) !important;
@@ -541,7 +541,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-la
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-label a:active {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .relation-label a:active {
 
   transform: scale(0.955, 1.03) !important;
   transition-duration: var(--motion-duration-squish) !important;
@@ -549,14 +549,14 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-la
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-label .arrow {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .relation-label .arrow {
 
   display: none !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-label.empty-links a {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .relation-label.empty-links a {
 
   color: var(--color-text-tertiary) !important;
 
@@ -566,7 +566,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .relation-la
 /* ==========================================================================
    5. Typography, Links, Code, Quotes & Editor Details
    ========================================================================== */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line {
 
   line-height: 1.85 !important;
   color: var(--color-text-primary);
@@ -574,7 +574,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line {
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line.line-title {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line.line-title {
 
   color: var(--color-text-primary) !important;
   font-weight: 600 !important;
@@ -586,8 +586,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line.line-t
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line strong,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .section-title {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line strong,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .section-title {
 
   color: #FFFFFF !important;
   font-weight: 600 !important;
@@ -597,7 +597,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .secti
 
 
 /* Links */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page-link {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line a.page-link {
 
   color: var(--color-text-primary) !important;
   text-decoration: none !important;
@@ -608,7 +608,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page-link:hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line a.page-link:hover {
 
   color: #FFFFFF !important;
   border-bottom-color: rgba(246, 240, 224, 0.85) !important;
@@ -616,7 +616,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page-link.empty-page-link {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line a.page-link.empty-page-link {
 
   color: var(--color-text-tertiary) !important;
   border-bottom: 1px dashed rgba(127, 118, 99, 0.5) !important;
@@ -624,7 +624,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page-link.empty-page-link:hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line a.page-link.empty-page-link:hover {
 
   color: var(--color-text-secondary) !important;
   border-bottom-color: var(--color-text-secondary) !important;
@@ -632,7 +632,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.link {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line a.link {
 
   color: var(--color-text-secondary) !important;
   text-decoration: none !important;
@@ -642,7 +642,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.link
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.link:hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line a.link:hover {
 
   color: var(--color-text-primary) !important;
   border-bottom-color: var(--color-text-primary) !important;
@@ -651,7 +651,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.link
 
 
 /* Hashtag Pills */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page-link[type="hashTag"] {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line a.page-link[type="hashTag"] {
 
   display: inline-block;
   padding: 0 9px;
@@ -665,7 +665,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page-link[type="hashTag"]:hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line a.page-link[type="hashTag"]:hover {
 
   background: rgba(255, 255, 255, 0.07) !important;
   border-color: rgba(255, 255, 255, 0.35) !important;
@@ -675,7 +675,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line a.page
 
 
 /* Quotes */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .quote {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .quote {
 
   background: rgba(255, 255, 255, 0.02) !important;
   border-left: 2px solid rgba(246, 240, 224, 0.45) !important;
@@ -687,14 +687,14 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .quote
 
 
 /* Code Blocks & Inline Code (Aligned to Indent + Unified Continuous Glass Container) */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line:has(span.code-block:not(.start)) {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line:has(span.code-block:not(.start)) {
 
   line-height: 1.6 !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.code-block.start {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line span.code-block.start {
 
   background: transparent !important;
   border: none !important;
@@ -704,7 +704,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.c
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.code-block .code-block-margin {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line span.code-block .code-block-margin {
 
   background: transparent !important;
   height: 0.45em !important;
@@ -713,7 +713,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.c
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.code-block .code-block-start {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line span.code-block .code-block-start {
 
   display: inline-flex;
   align-items: center;
@@ -732,8 +732,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.c
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.code-block .code-block-start a,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.code-block .code-block-start code {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line span.code-block .code-block-start a,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line span.code-block .code-block-start code {
 
   color: var(--color-text-primary) !important;
   text-decoration: none !important;
@@ -741,14 +741,14 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.c
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.code-block .tool-buttons {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line span.code-block .tool-buttons {
 
   color: var(--color-text-secondary) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.code-block:not(.start) {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line span.code-block:not(.start) {
 
   background: transparent !important;
   border: none !important;
@@ -760,7 +760,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.c
 
 
 /* Apply glass box onto inner span.indent so left edge aligns with block indentation */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.code-block:not(.start) > span.indent {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line span.code-block:not(.start) > span.indent {
 
   display: block !important;
   background: rgba(4, 8, 15, 0.56) !important;
@@ -778,7 +778,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line span.c
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line:not(:has(span.code-block:not(.start))) + .line span.code-block:not(.start) > span.indent {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line:not(:has(span.code-block:not(.start))) + .line span.code-block:not(.start) > span.indent {
 
   border-top: 1px solid rgba(255, 255, 255, 0.26) !important;
   border-top-left-radius: 12px !important;
@@ -788,7 +788,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line:not(:h
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line:has(span.code-block:not(.start)):not(:has(+ .line span.code-block:not(.start))) span.code-block:not(.start) > span.indent {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line:has(span.code-block:not(.start)):not(:has(+ .line span.code-block:not(.start))) span.code-block:not(.start) > span.indent {
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.55) !important;
   border-bottom-left-radius: 12px !important;
@@ -799,7 +799,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line:has(sp
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) pre.code-block {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) pre.code-block {
 
   background: rgba(4, 8, 15, 0.56) !important;
   color: var(--color-text-primary) !important;
@@ -815,7 +815,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) pre.code-blo
 
 
 /* Mermaid Optical Glass Override */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg {
 
   background: rgba(4, 8, 15, 0.56) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.24) !important;
@@ -828,10 +828,10 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .merma
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .node rect,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .node polygon,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .node circle,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .node path {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .node rect,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .node polygon,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .node circle,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .node path {
 
   fill: rgba(255, 255, 255, 0.06) !important;
   stroke: rgba(246, 240, 224, 0.45) !important;
@@ -839,8 +839,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .merma
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .nodeLabel,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg text {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .nodeLabel,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg text {
 
   fill: #F6F0E0 !important;
   color: #F6F0E0 !important;
@@ -848,15 +848,15 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .merma
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .flowchart-link,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .edgePath .path {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .flowchart-link,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .edgePath .path {
 
   stroke: #C8B996 !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .marker {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .marker {
 
   fill: #C8B996 !important;
   stroke: #C8B996 !important;
@@ -864,7 +864,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .merma
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .mermaid-preview svg .edgeLabel rect {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .mermaid-preview svg .edgeLabel rect {
 
   fill: rgba(4, 8, 15, 0.85) !important;
 
@@ -872,14 +872,14 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .merma
 
 
 /* Command line ($ / %) & Helpfeel (?) */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .cli code .prefix {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .cli code .prefix {
 
   color: #34D399 !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line code.helpfeel {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line code.helpfeel {
 
   background: rgba(246, 240, 224, 0.06) !important;
   border: 1px solid rgba(246, 240, 224, 0.18) !important;
@@ -889,22 +889,22 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line code.h
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line code.helpfeel .prefix {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line code.helpfeel .prefix {
 
   color: #E6C98A !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line code.helpfeel .entry {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line code.helpfeel .entry {
 
   color: var(--color-text-primary) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs {
 
   background: transparent !important;
   color: var(--color-text-primary) !important;
@@ -912,61 +912,61 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlig
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-comment,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-quote {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-comment,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-quote {
 
   color: var(--color-text-tertiary) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-keyword,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-selector-tag,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-tag {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-keyword,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-selector-tag,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-tag {
 
   color: #93C5FD !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-string,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-attr,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-attribute {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-string,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-attr,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-attribute {
 
   color: #F6F0E0 !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-number,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-literal {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-number,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-literal {
 
   color: #34D399 !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-title,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-section,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-name,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-selector-class,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-selector-id {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-title,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-section,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-name,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-selector-class,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-selector-id {
 
   color: #E6C98A !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-variable,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-built_in,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) code.highlight .hljs-type {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-variable,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-built_in,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) code.highlight .hljs-type {
 
   color: #C8B996 !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line code.code {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line code.code {
 
   background: rgba(255, 255, 255, 0.06) !important;
   color: var(--color-text-primary) !important;
@@ -978,7 +978,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line code.c
 
 
 /* Tables */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .table-block table {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .table-block table {
 
   border-collapse: separate !important;
   border-spacing: 0 !important;
@@ -990,8 +990,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .table
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .table-block table th,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .table-block table td {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .table-block table th,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .table-block table td {
 
   border-color: rgba(255, 255, 255, 0.08) !important;
   color: var(--color-text-primary) !important;
@@ -1000,7 +1000,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .table
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .table-block table tr:first-child td {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .table-block table tr:first-child td {
 
   background: rgba(255, 255, 255, 0.04) !important;
   color: var(--color-text-secondary) !important;
@@ -1010,35 +1010,35 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .table
 
 
 /* Bullet Dots, Cursor, Telomere */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .indent-mark .dot {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .indent-mark .dot {
 
   background-color: rgba(200, 185, 150, 0.6) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .cursor {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .cursor {
 
   border-color: #F6F0E0 !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .selections .selection {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .selections .selection {
 
   background-color: rgba(200, 185, 150, 0.22) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .telomere .telomere-border {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .telomere .telomere-border {
 
   border-color: rgba(255, 255, 255, 0.10) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .telomere .telomere-border.unread {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .line .telomere .telomere-border.unread {
 
   border-color: var(--accent-emerald-bead) !important;
 
@@ -1048,15 +1048,15 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .line .telom
 /* ==========================================================================
    6. Modals, Dropdowns & Popup Menus (Deep Optical Glass)
    ========================================================================== */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .modal-backdrop {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .modal-backdrop {
 
   background-color: rgba(4, 8, 15, 0.72) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .modal-content,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-menu {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .modal-content,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .dropdown-menu {
 
   background: rgba(8, 14, 26, 0.78) !important;
   backdrop-filter: blur(var(--blur-lens-deep)) saturate(145%) !important;
@@ -1075,7 +1075,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-me
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-menu {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .dropdown-menu {
 
   border-radius: 18px !important;
   padding: 8px !important;
@@ -1083,7 +1083,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-me
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-menu > li > a {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .dropdown-menu > li > a {
 
   color: var(--color-text-secondary) !important;
   border-radius: 10px !important;
@@ -1092,8 +1092,8 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-me
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-menu > li > a:hover,
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-menu > li > a:focus {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .dropdown-menu > li > a:hover,
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .dropdown-menu > li > a:focus {
 
   background: rgba(255, 255, 255, 0.07) !important;
   color: var(--color-text-primary) !important;
@@ -1101,14 +1101,14 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-me
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .dropdown-menu .divider {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .dropdown-menu .divider {
 
   background-color: rgba(255, 255, 255, 0.08) !important;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .popup-menu .button-container {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .popup-menu .button-container {
 
   background: rgba(8, 14, 26, 0.82) !important;
   backdrop-filter: blur(var(--blur-lens-dock)) saturate(140%) !important;
@@ -1121,7 +1121,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .popup-menu 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .popup-menu .button-container .button {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .popup-menu .button-container .button {
 
   color: var(--color-text-primary) !important;
   border-color: rgba(255, 255, 255, 0.14) !important;
@@ -1130,7 +1130,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .popup-menu 
 
 
 /* Status Bar / Info Bar */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .status-bar {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) .status-bar {
 
   background: rgba(8, 14, 26, 0.72) !important;
   backdrop-filter: blur(14px) !important;
@@ -1142,7 +1142,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) .status-bar 
 
 
 /* Subtle Optical Scrollbar */
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"])::-webkit-scrollbar, html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) ::-webkit-scrollbar {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"])::-webkit-scrollbar, html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) ::-webkit-scrollbar {
 
   width: 6px;
   height: 6px;
@@ -1150,14 +1150,14 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"])::-webkit-scr
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"])::-webkit-scrollbar-track, html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) ::-webkit-scrollbar-track {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"])::-webkit-scrollbar-track, html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) ::-webkit-scrollbar-track {
 
   background: transparent;
 
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"])::-webkit-scrollbar-thumb, html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) ::-webkit-scrollbar-thumb {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"])::-webkit-scrollbar-thumb, html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) ::-webkit-scrollbar-thumb {
 
   background: rgba(200, 185, 150, 0.22);
   border-radius: 9999px;
@@ -1165,7 +1165,7 @@ html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"])::-webkit-scr
 }
 
 
-html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"])::-webkit-scrollbar-thumb:hover, html:is(:not([data-hot3-theme]), [data-hot3-theme="optical-glass"]) ::-webkit-scrollbar-thumb:hover {
+html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"])::-webkit-scrollbar-thumb:hover, html:is(:not([data-cosense-theme]), [data-cosense-theme="optical-glass"]) ::-webkit-scrollbar-thumb:hover {
 
   background: rgba(246, 240, 224, 0.42);
 

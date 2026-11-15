@@ -1,6 +1,6 @@
 {
   "name": "@cosense-toolkit/userscript",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Scrapbox (Cosense) dynamic theme switcher and visual enhancements runtime",
   "type": "module",
   "scripts": {

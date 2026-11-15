@@ -9,9 +9,9 @@ describe('infrastructure/api/storage', () => {
   it('reads fallback when key is unset and reads stored value once written', () => {
     expect(readStorageItem('missing-key', 'optical-glass')).toBe('optical-glass');
 
-    const wrote = writeStorageItem('hot3-cosense-theme', 'frosted-daylight');
+    const wrote = writeStorageItem('cosense-toolkit-theme', 'frosted-daylight');
     expect(wrote).toBe(true);
-    expect(readStorageItem('hot3-cosense-theme', 'optical-glass')).toBe('frosted-daylight');
+    expect(readStorageItem('cosense-toolkit-theme', 'optical-glass')).toBe('frosted-daylight');
   });
 
   it('handles storage access exceptions gracefully', () => {

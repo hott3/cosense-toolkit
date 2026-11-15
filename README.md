@@ -100,14 +100,14 @@ cosense-toolkit/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* Default Theme: Pure Optical Glass (公開 Cosense プロジェクト / パッケージバージョン固定) */
-@import url('/api/code/cosense-toolkit/usercss-v0.1.0/pure-optical-glass.css');
+@import url('/api/code/cosense-toolkit/usercss-v0.2.0/pure-optical-glass.css');
 ```
 
 ### 2. UserScript の読み込み（ユーザーページ）
 ご自身のユーザーページ（例: `hott3`）の `code:script.js` に以下を記載します：
 
 ```javascript
-import '/api/code/cosense-toolkit/userscript-v0.2.0/script.js';
+import '/api/code/cosense-toolkit/userscript-v0.3.0/script.js';
 ```
 
 読み込むと以下の機能が有効になります（すべて `src/application/config.ts` のフラグで制御可能です）：
