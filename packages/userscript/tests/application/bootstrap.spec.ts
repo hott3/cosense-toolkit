@@ -9,7 +9,7 @@ import { DOCK_ID, THEME_MENU_ID, TOKEN_DRAWER_ID } from '../../src/infrastructur
 
 describe('application/bootstrap', () => {
   beforeEach(() => {
-    delete window.__hot3OpticLensInitialized;
+    delete window.__cosenseToolkitInitialized;
     delete window.scrapbox;
     delete window.cosense;
     document.head.innerHTML = '';
@@ -49,7 +49,7 @@ describe('application/bootstrap', () => {
     initCosenseToolkit();
     initCosenseToolkit();
 
-    expect(window.__hot3OpticLensInitialized).toBe(true);
+    expect(window.__cosenseToolkitInitialized).toBe(true);
     expect(document.querySelectorAll(`#${RUNTIME_STYLE_ID}`)).toHaveLength(1);
     const injectedCss = document.getElementById(RUNTIME_STYLE_ID)?.textContent ?? '';
     expect(injectedCss.trimStart().startsWith('@import')).toBe(true);

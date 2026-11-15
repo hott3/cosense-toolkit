@@ -13,7 +13,10 @@ describe('infrastructure/api/theme-loader', () => {
     document.documentElement.removeAttribute(THEME_ATTRIBUTE);
   });
 
-  it('sets data-hot3-theme attribute on documentElement', () => {
+  it('sets data-cosense-theme attribute on documentElement and uses cosense-dynamic-theme-css link id', () => {
+    expect(THEME_ATTRIBUTE).toBe('data-cosense-theme');
+    expect(THEME_LINK_ID).toBe('cosense-dynamic-theme-css');
+
     applyThemeAttribute('frosted-daylight');
     expect(document.documentElement.getAttribute(THEME_ATTRIBUTE)).toBe('frosted-daylight');
   });

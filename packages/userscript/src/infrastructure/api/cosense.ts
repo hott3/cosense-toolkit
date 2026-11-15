@@ -37,7 +37,7 @@ export interface ScrapboxGlobal {
 
 declare global {
   interface Window {
-    __hot3OpticLensInitialized?: boolean;
+    __cosenseToolkitInitialized?: boolean;
     scrapbox?: ScrapboxGlobal;
     cosense?: ScrapboxGlobal;
   }

@@ -1,13 +1,13 @@
 import { USERCSS_TAG, USERSCRIPT_TAG, type ThemeDefinition } from '../../domain/theme';
 import { OpticalToast } from './toast';
 
-export const DOCK_ID = 'hot3OpticDock';
-export const THEME_MENU_ID = 'hot3OpticThemeMenu';
-export const TOKEN_DRAWER_ID = 'hot3OpticTokenDrawer';
+export const DOCK_ID = 'cosenseOpticDock';
+export const THEME_MENU_ID = 'cosenseOpticThemeMenu';
+export const TOKEN_DRAWER_ID = 'cosenseOpticTokenDrawer';
 
 export const DOCK_SHELL_CSS = `
   /* Floating Optical Lens Dock */
-  #hot3OpticDock {
+  #cosenseOpticDock {
     position: fixed;
     bottom: 20px;
     right: 22px;
@@ -31,19 +31,19 @@ export const DOCK_SHELL_CSS = `
     contain: layout style;
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticDock,
-  html[data-hot3-theme="modern-clean"] #hot3OpticDock {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticDock,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticDock {
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid rgba(15, 23, 42, 0.10);
     border-top-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 12px 32px -6px rgba(15, 23, 42, 0.16);
   }
 
-  html[data-hot3-theme="modern-clean"] #hot3OpticDock [data-optic-effect-only] {
+  html[data-cosense-theme="modern-clean"] #cosenseOpticDock [data-optic-effect-only] {
     display: none !important;
   }
 
-  #hot3OpticDock .optic-bead-btn {
+  #cosenseOpticDock .optic-bead-btn {
     width: 36px;
     height: 36px;
     border-radius: 9999px;
@@ -68,34 +68,34 @@ export const DOCK_SHELL_CSS = `
                 border-color 180ms ease;
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticDock .optic-bead-btn,
-  html[data-hot3-theme="modern-clean"] #hot3OpticDock .optic-bead-btn {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticDock .optic-bead-btn,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticDock .optic-bead-btn {
     color: #334155;
     background: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(15, 23, 42, 0.10);
     box-shadow: 0 4px 10px -2px rgba(15, 23, 42, 0.10);
   }
 
-  #hot3OpticDock .optic-bead-btn:hover {
+  #cosenseOpticDock .optic-bead-btn:hover {
     color: #F6F0E0;
     border-top-color: rgba(255, 255, 255, 0.62);
     box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.45), 0 0 16px -2px rgba(246, 240, 224, 0.18);
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticDock .optic-bead-btn:hover,
-  html[data-hot3-theme="modern-clean"] #hot3OpticDock .optic-bead-btn:hover {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticDock .optic-bead-btn:hover,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticDock .optic-bead-btn:hover {
     color: #0369A1;
     border-color: rgba(3, 105, 161, 0.35);
     box-shadow: 0 6px 14px -2px rgba(14, 165, 233, 0.20);
   }
 
-  #hot3OpticDock .optic-bead-btn:active {
+  #cosenseOpticDock .optic-bead-btn:active {
     transform: scale(0.955, 1.03);
     transition-duration: 90ms;
     transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1.0);
   }
 
-  #hot3OpticDock .optic-bead-btn.optic-bead-center {
+  #cosenseOpticDock .optic-bead-btn.optic-bead-center {
     width: 40px;
     height: 40px;
     color: #F6F0E0;
@@ -104,7 +104,7 @@ export const DOCK_SHELL_CSS = `
   }
 
   /* Real-Time Token & Theme Inspector Drawer */
-  #hot3OpticTokenDrawer {
+  #cosenseOpticTokenDrawer {
     position: fixed;
     top: 0; right: 0; bottom: 0;
     width: 340px; max-width: 92vw;
@@ -124,89 +124,89 @@ export const DOCK_SHELL_CSS = `
     contain: layout style;
   }
 
-  #hot3OpticTokenDrawer.is-open {
+  #cosenseOpticTokenDrawer.is-open {
     transform: translate3d(0, 0, 0);
     pointer-events: auto;
     visibility: visible;
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticTokenDrawer,
-  html[data-hot3-theme="modern-clean"] #hot3OpticTokenDrawer {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticTokenDrawer,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticTokenDrawer {
     background: rgba(255, 255, 255, 0.90);
     border-left: 1px solid rgba(15, 23, 42, 0.12);
     color: #1E293B;
     box-shadow: 0 0 50px rgba(15, 23, 42, 0.18);
   }
 
-  #hot3OpticTokenDrawer .optic-drawer-header {
+  #cosenseOpticTokenDrawer .optic-drawer-header {
     padding: 18px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     display: flex; align-items: center; justify-content: space-between;
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticTokenDrawer .optic-drawer-header,
-  html[data-hot3-theme="modern-clean"] #hot3OpticTokenDrawer .optic-drawer-header {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticTokenDrawer .optic-drawer-header,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticTokenDrawer .optic-drawer-header {
     border-bottom-color: rgba(15, 23, 42, 0.08);
   }
 
-  #hot3OpticTokenDrawer .optic-drawer-title {
+  #cosenseOpticTokenDrawer .optic-drawer-title {
     display: flex; align-items: center; gap: 9px;
     font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
   }
 
-  #hot3OpticTokenDrawer .optic-drawer-dot {
+  #cosenseOpticTokenDrawer .optic-drawer-dot {
     width: 9px; height: 9px; border-radius: 9999px;
     background: #34D399; box-shadow: 0 0 10px rgba(52, 211, 153, 0.75);
   }
 
-  #hot3OpticTokenDrawer .optic-drawer-body {
+  #cosenseOpticTokenDrawer .optic-drawer-body {
     flex: 1; overflow-y: auto; padding: 18px 20px;
     font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     display: flex; flex-direction: column; gap: 18px;
   }
 
-  #hot3OpticTokenDrawer .optic-section-label {
+  #cosenseOpticTokenDrawer .optic-section-label {
     font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
     color: #7F7663; margin-bottom: 8px;
   }
 
-  #hot3OpticTokenDrawer .optic-token-row {
+  #cosenseOpticTokenDrawer .optic-token-row {
     display: flex; align-items: center; justify-content: space-between; gap: 8px;
     padding: 9px 11px; border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.02); margin-bottom: 6px;
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticTokenDrawer .optic-token-row,
-  html[data-hot3-theme="modern-clean"] #hot3OpticTokenDrawer .optic-token-row {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticTokenDrawer .optic-token-row,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticTokenDrawer .optic-token-row {
     border-color: rgba(15, 23, 42, 0.08);
     background: rgba(15, 23, 42, 0.03);
   }
 
-  #hot3OpticTokenDrawer .optic-token-key { opacity: 0.78; }
-  #hot3OpticTokenDrawer .optic-token-active { color: #10B981; font-weight: 600; }
+  #cosenseOpticTokenDrawer .optic-token-key { opacity: 0.78; }
+  #cosenseOpticTokenDrawer .optic-token-active { color: #10B981; font-weight: 600; }
 
-  #hot3OpticTokenDrawer .optic-speed-group { display: flex; gap: 8px; }
+  #cosenseOpticTokenDrawer .optic-speed-group { display: flex; gap: 8px; }
 
-  #hot3OpticTokenDrawer .optic-pill-btn {
+  #cosenseOpticTokenDrawer .optic-pill-btn {
     flex: 1; padding: 7px 10px; border-radius: 10px; cursor: pointer; font-size: 11px;
     color: inherit; background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.14);
     transition: transform 340ms cubic-bezier(0.34, 1.56, 0.64, 1), border-color 180ms ease;
   }
 
-  html[data-hot3-theme="frosted-daylight"] #hot3OpticTokenDrawer .optic-pill-btn,
-  html[data-hot3-theme="modern-clean"] #hot3OpticTokenDrawer .optic-pill-btn {
+  html[data-cosense-theme="frosted-daylight"] #cosenseOpticTokenDrawer .optic-pill-btn,
+  html[data-cosense-theme="modern-clean"] #cosenseOpticTokenDrawer .optic-pill-btn {
     background: rgba(15, 23, 42, 0.04);
     border-color: rgba(15, 23, 42, 0.14);
   }
 
-  #hot3OpticTokenDrawer .optic-pill-btn.is-active,
-  #hot3OpticTokenDrawer .optic-pill-btn:hover {
+  #cosenseOpticTokenDrawer .optic-pill-btn.is-active,
+  #cosenseOpticTokenDrawer .optic-pill-btn:hover {
     border-color: rgba(246, 240, 224, 0.55);
   }
 
-  #hot3OpticTokenDrawer .optic-close-btn {
+  #cosenseOpticTokenDrawer .optic-close-btn {
     width: 30px; height: 30px; border-radius: 9999px; cursor: pointer;
     display: inline-flex; align-items: center; justify-content: center;
     color: inherit; background: rgba(255, 255, 255, 0.05);
@@ -214,9 +214,9 @@ export const DOCK_SHELL_CSS = `
   }
 
   @media (max-width: 640px) {
-    #hot3OpticDock { bottom: 14px; right: 14px; padding: 5px 8px; gap: 6px; }
-    #hot3OpticDock .optic-bead-btn { width: 32px; height: 32px; }
-    #hot3OpticDock .optic-bead-btn.optic-bead-center { width: 36px; height: 36px; }
+    #cosenseOpticDock { bottom: 14px; right: 14px; padding: 5px 8px; gap: 6px; }
+    #cosenseOpticDock .optic-bead-btn { width: 32px; height: 32px; }
+    #cosenseOpticDock .optic-bead-btn.optic-bead-center { width: 36px; height: 36px; }
   }
 `;
 
@@ -251,7 +251,7 @@ export class OpticalDock {
     dock.id = DOCK_ID;
     dock.setAttribute('aria-label', 'Optical Lens Controls');
     dock.innerHTML = `
-      <button class="optic-bead-btn" id="hot3OpticThemeBtn" title="Theme Selector" type="button" aria-haspopup="true">
+      <button class="optic-bead-btn" id="cosenseOpticThemeBtn" title="Theme Selector" type="button" aria-haspopup="true">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
           <path d="M12 2a7 7 0 0 0 7 7c0 2-1 3-3 4-1.5.8-2 1.5-2 3"></path>
@@ -260,14 +260,14 @@ export class OpticalDock {
           <circle cx="16" cy="10" r="1.2" fill="currentColor"></circle>
         </svg>
       </button>
-      <button class="optic-bead-btn optic-bead-center" id="hot3OpticPulseBtn" title="Trigger Fluid Resonance" type="button" data-optic-effect-only>
+      <button class="optic-bead-btn optic-bead-center" id="cosenseOpticPulseBtn" title="Trigger Fluid Resonance" type="button" data-optic-effect-only>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 3v3m0 12v3M3 12h3m12 0h3"></path>
           <circle cx="12" cy="12" r="4"></circle>
           <path d="m18.36 5.64-2.12 2.12m-8.48 8.48-2.12 2.12m0-12.72 2.12 2.12m8.48 8.48 2.12 2.12"></path>
         </svg>
       </button>
-      <button class="optic-bead-btn" id="hot3OpticInspectorBtn" title="Token & Theme Inspector" type="button">
+      <button class="optic-bead-btn" id="cosenseOpticInspectorBtn" title="Token & Theme Inspector" type="button">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="3" width="18" height="18" rx="4"></rect>
           <path d="M3 9h18M9 21V9"></path>
@@ -277,17 +277,17 @@ export class OpticalDock {
 
     document.body.appendChild(dock);
 
-    document.getElementById('hot3OpticThemeBtn')?.addEventListener('click', (e) => {
+    document.getElementById('cosenseOpticThemeBtn')?.addEventListener('click', (e) => {
       e.stopPropagation();
       this.toggleMenu();
     });
 
-    document.getElementById('hot3OpticPulseBtn')?.addEventListener('click', () => {
+    document.getElementById('cosenseOpticPulseBtn')?.addEventListener('click', () => {
       this.onPulse();
       this.showToast('Fluid Resonance Triggered');
     });
 
-    document.getElementById('hot3OpticInspectorBtn')?.addEventListener('click', (e) => {
+    document.getElementById('cosenseOpticInspectorBtn')?.addEventListener('click', (e) => {
       e.stopPropagation();
       this.toggleDrawer();
     });
@@ -357,16 +357,16 @@ export class OpticalDock {
           <span class="optic-drawer-dot"></span>
           <span>Theme & Physics Inspector</span>
         </div>
-        <button class="optic-close-btn" id="hot3OpticDrawerClose" type="button" aria-label="Close">✕</button>
+        <button class="optic-close-btn" id="cosenseOpticDrawerClose" type="button" aria-label="Close">✕</button>
       </div>
       <div class="optic-drawer-body">
         <div>
           <div class="optic-section-label">Active Theme Identity</div>
-          <div class="optic-token-row"><span class="optic-token-key">Label</span><span class="optic-token-active" id="hot3TokenLabel">-</span></div>
-          <div class="optic-token-row"><span class="optic-token-key">Badge</span><span id="hot3TokenBadge">-</span></div>
-          <div class="optic-token-row"><span class="optic-token-key">Base Bg</span><span id="hot3TokenBg">-</span></div>
-          <div class="optic-token-row"><span class="optic-token-key">Fluid Mode</span><span id="hot3TokenFluid">-</span></div>
-          <div class="optic-token-row"><span class="optic-token-key">Version</span><span id="hot3TokenVersion">${USERSCRIPT_TAG} / ${USERCSS_TAG}</span></div>
+          <div class="optic-token-row"><span class="optic-token-key">Label</span><span class="optic-token-active" id="cosenseTokenLabel">-</span></div>
+          <div class="optic-token-row"><span class="optic-token-key">Badge</span><span id="cosenseTokenBadge">-</span></div>
+          <div class="optic-token-row"><span class="optic-token-key">Base Bg</span><span id="cosenseTokenBg">-</span></div>
+          <div class="optic-token-row"><span class="optic-token-key">Fluid Mode</span><span id="cosenseTokenFluid">-</span></div>
+          <div class="optic-token-row"><span class="optic-token-key">Version</span><span id="cosenseTokenVersion">${USERSCRIPT_TAG} / ${USERCSS_TAG}</span></div>
         </div>
         <div>
           <div class="optic-section-label">Optical Drift Velocity</div>
@@ -382,7 +382,7 @@ export class OpticalDock {
     document.body.appendChild(drawer);
     this.drawerEl = drawer;
 
-    document.getElementById('hot3OpticDrawerClose')?.addEventListener('click', () => {
+    document.getElementById('cosenseOpticDrawerClose')?.addEventListener('click', () => {
       this.closeDrawer();
     });
 
@@ -398,11 +398,11 @@ export class OpticalDock {
   }
 
   updateInspector(theme: ThemeDefinition): void {
-    const labelEl = document.getElementById('hot3TokenLabel');
-    const badgeEl = document.getElementById('hot3TokenBadge');
-    const bgEl = document.getElementById('hot3TokenBg');
-    const fluidEl = document.getElementById('hot3TokenFluid');
-    const versionEl = document.getElementById('hot3TokenVersion');
+    const labelEl = document.getElementById('cosenseTokenLabel');
+    const badgeEl = document.getElementById('cosenseTokenBadge');
+    const bgEl = document.getElementById('cosenseTokenBg');
+    const fluidEl = document.getElementById('cosenseTokenFluid');
+    const versionEl = document.getElementById('cosenseTokenVersion');
 
     if (labelEl) labelEl.textContent = theme.label;
     if (badgeEl) badgeEl.textContent = theme.badge;
@@ -438,14 +438,14 @@ export class OpticalDock {
       if (
         this.menuEl?.classList.contains('is-open') &&
         !this.menuEl.contains(target) &&
-        !document.getElementById('hot3OpticThemeBtn')?.contains(target)
+        !document.getElementById('cosenseOpticThemeBtn')?.contains(target)
       ) {
         this.closeMenu();
       }
       if (
         this.drawerEl?.classList.contains('is-open') &&
         !this.drawerEl.contains(target) &&
-        !document.getElementById('hot3OpticInspectorBtn')?.contains(target)
+        !document.getElementById('cosenseOpticInspectorBtn')?.contains(target)
       ) {
         this.closeDrawer();
       }
