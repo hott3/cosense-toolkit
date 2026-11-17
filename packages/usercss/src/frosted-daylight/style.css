@@ -119,8 +119,7 @@ html[data-cosense-theme="frosted-daylight"] body {
 
   background: transparent !important;
   color: #1E293B !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Hiragino Kaku Gothic ProN", system-ui, sans-serif !important;
-  letter-spacing: 0.02em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
   overflow-x: hidden;
   position: relative;
   z-index: 0;

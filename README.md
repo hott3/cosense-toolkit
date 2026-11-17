@@ -100,21 +100,21 @@ cosense-toolkit/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* Default Theme: Pure Optical Glass (公開 Cosense プロジェクト / パッケージバージョン固定) */
-@import url('/api/code/cosense-toolkit/usercss-v0.2.0/pure-optical-glass.css');
+@import url('/api/code/cosense-toolkit/usercss-v0.2.1/pure-optical-glass.css');
 ```
 
 ### 2. UserScript の読み込み（ユーザーページ）
 ご自身のユーザーページ（例: `hott3`）の `code:script.js` に以下を記載します：
 
 ```javascript
-import '/api/code/cosense-toolkit/userscript-v0.3.0/script.js';
+import '/api/code/cosense-toolkit/userscript-v0.4.0/script.js';
 ```
 
 読み込むと以下の機能が有効になります（すべて `src/application/config.ts` のフラグで制御可能です）：
 
 - **Optical Lens ドック ＆ テーマスイッチャー**：画面右下に常駐し、パレットから瞬時にテーマや流体背景・表面張力リップルを切り替え（設定は `localStorage` に保持）。
 - **外部検索メニュー (`search-tools`)**：PageMenu に 6 種の外部検索アクション（Google AI モード、Google 検索、Weblio 辞書［引用文自動挿入付き］、Google Fonts、LyricFind、Let's EMOJI）を追加。
-- **ページテンプレート (`page-templates`)**：PageMenu に定型テンプレート 3 種（`:ticketlog`、`日報 YYYYMMDD`、`セミナーレポート`）を出力する項目を追加。
+- **ページテンプレート (`page-templates`)**：PageMenu に定型テンプレート 3 種（`:ticketlog`、`日報 YYYYMMDD`、`セミナーレポート`）を出力する項目を追加し、Dock の `Page Templates` モーダルからブラウザ（`localStorage`）へカスタムテンプレートを保存・編集・削除・挿入可能。
 - **今日の日報カード強調 (`today-page-marker`)**：当日の `日報 YYYYMMDD` カードへ `.today-page` クラスを付与し、Optical Glass トークンに準拠したバッジ＆ハイライトを適用（SPA 遷移時の再判定対応）。
 
 ---

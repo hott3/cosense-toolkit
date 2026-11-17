@@ -11,10 +11,10 @@ import {
 
 describe('domain/theme', () => {
   describe('version constants', () => {
-    it('exposes matching userscript 0.3.0 and usercss-v0.2.0 tags', () => {
-      expect(USERSCRIPT_VERSION).toBe('0.3.0');
-      expect(USERSCRIPT_TAG).toBe('userscript-v0.3.0');
-      expect(USERCSS_TAG).toBe('usercss-v0.2.0');
+    it('exposes matching userscript 0.4.0 and usercss-v0.2.1 tags', () => {
+      expect(USERSCRIPT_VERSION).toBe('0.4.0');
+      expect(USERSCRIPT_TAG).toBe('userscript-v0.4.0');
+      expect(USERCSS_TAG).toBe('usercss-v0.2.1');
     });
   });
 

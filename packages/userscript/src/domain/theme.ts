@@ -2,9 +2,9 @@ declare const __COSENSE_USERCSS_VERSION__: string | undefined;
 declare const __COSENSE_USERSCRIPT_VERSION__: string | undefined;
 
 export const USERCSS_VERSION =
-  typeof __COSENSE_USERCSS_VERSION__ !== 'undefined' ? __COSENSE_USERCSS_VERSION__ : '0.2.0';
+  typeof __COSENSE_USERCSS_VERSION__ !== 'undefined' ? __COSENSE_USERCSS_VERSION__ : '0.2.1';
 export const USERSCRIPT_VERSION =
-  typeof __COSENSE_USERSCRIPT_VERSION__ !== 'undefined' ? __COSENSE_USERSCRIPT_VERSION__ : '0.3.0';
+  typeof __COSENSE_USERSCRIPT_VERSION__ !== 'undefined' ? __COSENSE_USERSCRIPT_VERSION__ : '0.4.0';
 
 export const USERCSS_TAG = `usercss-v${USERCSS_VERSION}`;
 export const USERSCRIPT_TAG = `userscript-v${USERSCRIPT_VERSION}`;
