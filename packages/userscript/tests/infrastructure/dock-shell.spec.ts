@@ -73,4 +73,22 @@ describe('infrastructure/ui/dock-shell', () => {
     document.body.click();
     expect(drawer?.classList.contains('is-open')).toBe(false);
   });
+
+  it('renders optional templates button on dock and invokes callback on click', () => {
+    const onTemplatesOpen = vi.fn();
+    const dock = new OpticalDock(
+      THEMES,
+      vi.fn(),
+      vi.fn(),
+      () => THEMES[0],
+      vi.fn(),
+      onTemplatesOpen
+    );
+    dock.init();
+
+    const tplBtn = document.getElementById('cosenseOpticTemplatesBtn');
+    expect(tplBtn).not.toBeNull();
+    tplBtn?.click();
+    expect(onTemplatesOpen).toHaveBeenCalledTimes(1);
+  });
 });

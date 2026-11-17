@@ -1,7 +1,8 @@
 import { THEMES } from '../domain/theme';
 import { AMBIENT_FLUID_CSS } from '../features/ambient-fluid/style';
 import { AmbientFluidField } from '../features/ambient-fluid/ui';
-import { initPageTemplates } from '../features/page-templates/ui';
+import { TEMPLATE_MODAL_CSS } from '../features/page-templates/style';
+import { initPageTemplates, TemplateManagerModal } from '../features/page-templates/ui';
 import { initSearchTools } from '../features/search-tools/ui';
 import { SURFACE_TENSION_CSS } from '../features/surface-tension/style';
 import { SurfaceTensionPhysics } from '../features/surface-tension/ui';
@@ -36,6 +37,7 @@ export function initCosenseToolkit(flagOverrides?: Partial<ToolkitFeatureFlags>)
     flags.themeSwitcher ? TOAST_CSS : '',
     flags.ambientFluid ? AMBIENT_FLUID_CSS : '',
     flags.surfaceTension ? SURFACE_TENSION_CSS : '',
+    flags.pageTemplates ? TEMPLATE_MODAL_CSS : '',
   ]
     .filter(Boolean)
     .join('\n');
@@ -81,12 +83,17 @@ export function initCosenseToolkit(flagOverrides?: Partial<ToolkitFeatureFlags>)
     }
   };
 
+  const templateModal = flags.pageTemplates
+    ? new TemplateManagerModal((message) => dock?.showToast(message))
+    : null;
+
   dock = new OpticalDock(
     THEMES,
     (themeId) => applyTheme(themeId, true),
     () => ambient?.pulse(),
     () => themeSwitcher.getActiveTheme(),
-    (speed) => ambient?.setDriftSpeed(speed)
+    (speed) => ambient?.setDriftSpeed(speed),
+    templateModal ? () => templateModal.toggle() : undefined
   );
 
   dock.init();

@@ -233,7 +233,8 @@ export class OpticalDock {
     private readonly onThemeSelect: (themeId: string) => void,
     private readonly onPulse: () => void,
     private readonly getActiveTheme: () => ThemeDefinition,
-    private readonly onSpeedChange: (speed: string) => void
+    private readonly onSpeedChange: (speed: string) => void,
+    private readonly onTemplatesOpen?: () => void
   ) {}
 
   init(): void {
@@ -272,7 +273,19 @@ export class OpticalDock {
           <rect x="3" y="3" width="18" height="18" rx="4"></rect>
           <path d="M3 9h18M9 21V9"></path>
         </svg>
-      </button>
+      </button>${
+        this.onTemplatesOpen
+          ? `
+      <button class="optic-bead-btn" id="cosenseOpticTemplatesBtn" title="Page Templates" type="button">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="8" y1="13" x2="16" y2="13"></line>
+          <line x1="8" y1="17" x2="13" y2="17"></line>
+        </svg>
+      </button>`
+          : ''
+      }
     `;
 
     document.body.appendChild(dock);
@@ -290,6 +303,13 @@ export class OpticalDock {
     document.getElementById('cosenseOpticInspectorBtn')?.addEventListener('click', (e) => {
       e.stopPropagation();
       this.toggleDrawer();
+    });
+
+    document.getElementById('cosenseOpticTemplatesBtn')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.closeMenu();
+      this.closeDrawer();
+      this.onTemplatesOpen?.();
     });
   }
 

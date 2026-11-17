@@ -1,12 +1,27 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { buildPageTemplates } from '../../src/features/page-templates/logic';
-import { initPageTemplates } from '../../src/features/page-templates/ui';
+import {
+  CUSTOM_TEMPLATES_STORAGE_KEY,
+  addCustomTemplate,
+  buildPageTemplates,
+  deleteCustomTemplate,
+  expandTemplatePlaceholders,
+  loadCustomTemplates,
+  updateCustomTemplate,
+} from '../../src/features/page-templates/logic';
+import {
+  TEMPLATE_BACKDROP_ID,
+  TEMPLATE_MODAL_ID,
+  TemplateManagerModal,
+  initPageTemplates,
+} from '../../src/features/page-templates/ui';
 import type { PageMenuItemOptions } from '../../src/infrastructure/api/cosense';
 
 describe('features/page-templates (Given-When-Then)', () => {
   beforeEach(() => {
     delete window.scrapbox;
     delete window.cosense;
+    window.localStorage.clear();
+    document.body.innerHTML = '';
   });
 
   afterEach(() => {
@@ -163,5 +178,90 @@ describe('features/page-templates (Given-When-Then)', () => {
       ...expectedTemplates[0].lines,
       ...expectedTemplates[2].lines,
     ]);
+  });
+
+  it('Given browser localStorage, When custom templates are added, updated, and deleted, Then they persist and expand date placeholders', () => {
+    // Given: corrupted storage falls back safely
+    window.localStorage.setItem(CUSTOM_TEMPLATES_STORAGE_KEY, '{broken');
+    expect(loadCustomTemplates()).toEqual([]);
+
+    // When: add & expand
+    const created = addCustomTemplate('読書メモ', '#読書\n日付: {{today}}\n昨日: {{yesterday}}');
+    expect(loadCustomTemplates()).toHaveLength(1);
+    expect(
+      expandTemplatePlaceholders(created.content, new Date(2026, 10, 15))
+    ).toBe('#読書\n日付: 20261115\n昨日: 20261114');
+
+    // When: update
+    const updated = updateCustomTemplate(created.id, '読書ログ', '#読書ログ\n明日: {{tomorrow}}');
+    expect(updated?.name).toBe('読書ログ');
+    expect(loadCustomTemplates()[0].name).toBe('読書ログ');
+
+    // When: initPageTemplates registers built-in + custom
+    const registeredItems: PageMenuItemOptions[] = [];
+    window.scrapbox = {
+      PageMenu: {
+        addItem: (item) => registeredItems.push(item),
+      },
+    };
+    const count = initPageTemplates(new Date(2026, 10, 15));
+    expect(count).toBe(4);
+    expect(registeredItems[3].title).toBeTypeOf('function');
+
+    // When: delete
+    expect(deleteCustomTemplate(created.id)).toBe(true);
+    expect(loadCustomTemplates()).toEqual([]);
+  });
+
+  it('Given TemplateManagerModal, When user creates, edits, inserts, and deletes a template via UI, Then localStorage and Scrapbox page reflect all operations', () => {
+    const lines = [{ id: '0', text: 'テスト' }];
+    const insertLineSpy = vi.fn((text: string) => {
+      lines.push({ id: String(lines.length), text });
+    });
+    window.scrapbox = {
+      Page: { title: 'テスト', lines, insertLine: insertLineSpy },
+      PageMenu: { addItem: vi.fn() },
+    };
+
+    const notifications: string[] = [];
+    const modal = new TemplateManagerModal((msg) => notifications.push(msg));
+    modal.open();
+
+    expect(document.getElementById(TEMPLATE_BACKDROP_ID)?.classList.contains('is-open')).toBe(true);
+    expect(document.getElementById(TEMPLATE_MODAL_ID)).not.toBeNull();
+
+    // Create template via form
+    const nameInput = document.getElementById('cosenseOpticTemplateName') as HTMLInputElement;
+    const contentInput = document.getElementById('cosenseOpticTemplateContent') as HTMLTextAreaElement;
+    const form = document.getElementById('cosenseOpticTemplateForm') as HTMLFormElement;
+
+    nameInput.value = '会議メモ';
+    contentInput.value = '議題\n\t決定事項';
+    form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+
+    expect(loadCustomTemplates()).toHaveLength(1);
+    expect(notifications.at(-1)).toBe('Template saved: 会議メモ');
+
+    // Edit via UI button
+    const editBtn = document.querySelector<HTMLButtonElement>('[data-action="edit"]');
+    editBtn?.click();
+    nameInput.value = '定例メモ';
+    contentInput.value = 'アジェンダ\n\tTODO';
+    form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+
+    expect(loadCustomTemplates()[0].name).toBe('定例メモ');
+    expect(notifications.at(-1)).toBe('Template updated: 定例メモ');
+
+    // Insert via UI button
+    const insertBtn = document.querySelector<HTMLButtonElement>('[data-action="insert"]');
+    insertBtn?.click();
+    expect(insertLineSpy).toHaveBeenCalledTimes(2);
+    expect(lines.slice(1).map((l) => l.text)).toEqual(['アジェンダ', '\tTODO']);
+
+    // Delete via UI button
+    modal.open();
+    const deleteBtn = document.querySelector<HTMLButtonElement>('[data-action="delete"]');
+    deleteBtn?.click();
+    expect(loadCustomTemplates()).toEqual([]);
   });
 });
